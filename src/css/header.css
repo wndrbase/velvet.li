@@ -1,20 +1,7 @@
 .header {
 
 	position: relative;
-	z-index: 9;
-	padding: 37px 0 30px;
-
-	&--sep {
-
-		border-bottom: 2px solid #eee;
-
-	}
-
-	@media ($smWidth) {
-
-		padding: 15px 0;
-
-	}
+	padding: 38px 0;
 
 	.center {
 
@@ -35,20 +22,19 @@
 
 		@media ($smWidth) {
 
-			img {
-
-				width: 160px;
-				height: auto;
-
-			}
-
 		}
+
+	}
+
+	&__social {
+
+		width: 296px;
 
 	}
 
 }
 
-@media ($mdWidth) {
+@media ($smWidth) {
 
 	.btn-menu-toggle {
 
