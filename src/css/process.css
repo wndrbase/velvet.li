@@ -1,0 +1,81 @@
+.process {
+
+	margin: 144px 0 141px;
+
+	&__title {
+
+		font-weight: bold;
+		font-size: 60px;
+		line-height: 72px;
+		margin-bottom: 46px;
+
+	}
+
+	&__box {
+
+		display: flex;
+		align-items: flex-start;
+
+	}
+
+	&__left {
+
+		width: 410px;
+		height: 452px;
+		flex-shrink: 0;
+		position: relative;
+		margin-top: 30px;
+
+	}
+
+	&__right {
+
+		padding-left: 130px;
+
+	}
+
+	&__btn {
+
+		font-size: 18px;
+		line-height: 36px;
+		color: #412E46;
+		padding-left: 48px;
+		margin: 24px 0;
+		opacity: .5;
+
+		&-ico {
+
+			position: absolute;
+			width: 36px;
+			height: 36px;
+			top: 0;
+			left: 0;
+			border-radius: 50%;
+			color: #fff;
+			line-height: 36px;
+			text-align: center;
+			font-size: 15px;
+			font-weight: 500;
+			background-color: #3F2D44;
+
+		}
+
+		@media ($desktop) {
+
+			&:hover {
+
+				opacity: 1;
+
+			}
+
+		}
+
+		&.is-active {
+
+			opacity: 1;
+
+		}
+
+	}
+
+}
