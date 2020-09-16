@@ -83,4 +83,58 @@
 
 	}
 
+	&--tab {
+
+		padding: 0;
+		height: 24px;
+		font-size: 20px;
+		line-height: 24px;
+		border-radius: 0;
+		color: color(var(--color) a(50%));
+		background-color: transparent !important;
+
+		&::after {
+
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			left: 0;
+			bottom: -8px;
+			content: '';
+			opacity: 0;
+			background-color: var(--color);
+			transition: var(--transitionDefault);
+
+		}
+
+		&.is-active {
+
+			color: var(--color);
+
+			&::after {
+
+				opacity: 1;
+
+			}
+
+		}
+
+		@media ($desktop) {
+
+			&:hover {
+
+				&::after {
+
+					opacity: .5;
+
+				}
+
+			}
+
+		}
+
+
+	}
+
+
 }

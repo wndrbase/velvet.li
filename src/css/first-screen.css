@@ -4,223 +4,110 @@
 
 	&__wrap {
 
-		overflow: hidden;
-		position: relative;
+		display: flex;
+		margin: 56px 0 150px;
+		align-items: flex-start;
+		justify-content: space-between;
 
 	}
 
 	&__content {
 
-		padding: 42px 0 72px;
-
-		@media ($smWidth) {
-
-			padding: 18px 0;
-			z-index: 1;
-			position: relative;
-
-			.btn {
-
-				width: 380px;
-
-			}
-
-		}
-
-		.btn {
-
-			width: 290px;
-			max-width: 100%;
-			z-index: 1;
-
-		}
+		max-width: 720px;
 
 	}
 
-	.h1 {
+	&__title {
 
-		color: #131415;
-		margin-bottom: 12px;
+		font-weight: bold;
+		font-size: 60px;
+		line-height: 72px;
+		margin: 44px 0 24px;
 
-		@media ($mdWidth) {
+		span {
 
-			margin: 0;
-
-		}
-
-		@media ($smWidth) {
-
-			font-size: 30px;
-			line-height: 40px;
-
-		}
-
-		@media ($xsWidth) {
-
-			font-size: 28px;
-
-		}
-
-	}
-
-	&__intro {
-
-		font-size: 30px;
-		line-height: 40px;
-		color: #224fad;
-		margin: 10px 0;
-
-		@media ($smWidth) {
-
-			font-size: 20px;
-			line-height: 30px;
-			margin: 22px 0;
-
-		}
-
-	}
-
-	&__steps {
-
-		font-size: 20px;
-		line-height: 30px;
-		margin: 30px 0;
-		font-weight: 600;
-
-		@media ($smWidth) {
-
-			display: none;
-
-		}
-
-		b {
-
-			color: #3c77f0;
-			font-weight: 600;
+			color: color(var(--color) a(50%));
 			position: relative;
 
 			&::after {
 
 				position: absolute;
-				height: 12px;
-				left: 4PX;
-				right: 2px;
-				bottom: -8px;
+				width: 2px;
+				top: 20px;
+				right: 1px;
+				bottom: 14px;
 				content: '';
-				background-size: 100% 100%;
-				pointer-events: none;
-				background-image: url("data:image/svg+xml,%3Csvg width='147' height='12' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 10c47.339-5.995 95.363-6.31 143-8' stroke='%235AB996' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+				background-color: var(--color);
+				animation: cursor 0.8s infinite;
 
 			}
 
 		}
 
-	}
+		svg {
 
-	&__checkbox {
-
-		max-width: 480px;
-		margin-bottom: 30px;
-
-		@media ($smWidth) {
-
-			margin: 180px -20px 0;
-			padding: 20px;
-			position: relative;
-
-			&::before {
-
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: -40px;
-				border-radius: 20px;
-				content: '';
-				background-color: var(--bg);
-
-			}
-
-		}
-
-		@media ($xsWidth) {
-
-			margin: 180px -10px 0;
-			padding: 20px 10px;
+			display: inline;
+			margin-left: 5px;
 
 		}
 
 	}
 
-	&__rule {
+	&__tabs {
 
-		margin-top: 20px;
-		font-size: 14px;
-		line-height: 20px;
-		color: #7f7f7f;
-		position: relative;
-		z-index: 1;
+		display: flex;
+		margin: 24px -12px 60px;
 
-		@media ($smWidth) {
+		.btn {
 
-			font-size: 12px;
+			margin: 12px;
 
 		}
+
+	}
+
+	&__btn {
+
+		margin: 36px 0;
+
+		.btn {
+
+			background-color: #7b4865;
+
+		}
+
+		svg {
+
+			position: absolute;
+			top: -51px;
+			right: -155px;
+
+		}
+
+	}
+
+	&__note {
+
+		color: var(--text);
+		font-size: 16px;
+		line-height: 24px;
 
 		a {
 
-			color: var(--color);
 			text-decoration: underline;
+			color: #3F2D44;
+			transition: var(--transitionDefault);
 
 			@media ($desktop) {
 
 				&:hover {
 
-					text-decoration: none;
+					text-decoration-color: transparent;
 
 				}
 
 			}
 
-		}
-
-	}
-
-	&__list {
-
-		margin: 30px 0 40px;
-		font-size: 18px;
-		line-height: 30px;
-		counter-reset: headings 0;
-
-		@media ($mdWidth) {
-
-			margin-bottom: 30px;
-
-		}
-
-		@media ($smWidth) {
-
-			display: none;
-
-		}
-
-		li {
-
-			margin: 10px 0;
-			padding-left: 22px;
-
-			&::before {
-
-				position: absolute;
-				top: 0;
-				left: 0;
-				counter-increment: headings 1;
-				content: counter(headings, decimal) '.';
-				color: #3c77f0;
-				font-weight: 600;
-
-			}
 
 		}
 
@@ -228,62 +115,29 @@
 
 	&__img {
 
+		position: relative;
+		width: 400px;
+		height: 480px;
+
+	}
+
+	&__picture {
+
 		position: absolute;
-		top: 0;
-		right: 0;
-		pointer-events: none;
+		left: -27px;
+		bottom: 0;
 
-		@media ($mdWidth) {
+	}
 
-			position: relative;
+}
 
-			img {
+@keyframes cursor {
 
-				display: block;
-				margin: -163px auto 0;
-				position: relative;
-				top: 0;
-				left: 0;
-				right: 0;
-				width: 750px;
-				height: 507px;
-
-			}
-
-		}
-
-		@media ($smWidth) {
-
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-
-			img {
-
-				position: absolute;
-				top: auto;
-				left: auto;
-				right: -107px;
-				bottom: 70px;
-				height: 507px;
-				margin: 0;
-				width: 467px;
-				height: 351px;
-
-			}
-
-		}
-
-		img {
-
-			position: absolute;
-			top: 164px;
-			right: -215px;
-
-		}
-
+	50% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 0;
 	}
 
 }
