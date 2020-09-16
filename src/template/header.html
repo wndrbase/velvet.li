@@ -1,0 +1,25 @@
+	<header class="header">
+
+		<div class="center">
+
+			<a href="{{ url }}" class="header__logo" title="{{ site }}">
+
+				<img src="/img/logo.svg" alt="{{ site }}" width="218" height="40">
+
+			</a>
+
+			<div class="header__social">
+
+{% include "template/social.html" %}
+
+			</div>
+
+{% include "template/menu.html" %}
+
+			<button class="button btn-menu-toggle visible-md" type="button">
+				<span>menu</span>
+			</button>
+
+		</div>
+
+	</header>

@@ -1,0 +1,16 @@
+:root {
+
+	--color: #412e46;
+	--text: #7e7e7e;
+	--error: #f00;
+	--bg: #f3ebe2;
+	--blue: blue;
+	--border: #412e46;
+	--green: green;
+
+}
+
+$desktop: (min-width: 1200px);
+$mdWidth: (max-width: 1199px);
+$smWidth: (max-width: 719px);
+$xsWidth: (max-width: 359px);
