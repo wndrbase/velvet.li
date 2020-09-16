@@ -2,111 +2,68 @@
 
 		<div class="center">
 
-			<div class="footer__flex">
+			<div class="footer__box">
 
-				<div class="footer__col footer__col--first">
-
-					<a href="{{ url }}" class="footer__logo" title="{{ site }}">
-
-						<img src="/img/logo--black.svg" alt="{{ site }}" width="218" height="44">
-
-					</a>
+				<div class="footer__left">
 
 					<p class="footer__text">
-						Услуга по оформлению полиса комплексного ипотечного страхования предоставляется партнером ООО «ВИРТУ БРОКЕР» (ОГРН 1175029010309).
+						If you would like to find out more about which Velvet legal entity you receive services from, or if you have any other questions, please reach out to us via support chat available in right bottom corner. For legal notices and imprint / licensing information please press links below for additional information.
 					</p>
 
-					<p class="footer__text">
-						Экономия при приобретении полиса достигается за счет сравнения предложений в разных страховых компаниях.
+					<p class="footer__copyright">
+						<img src="/img/logo-sort.svg" alt="{{ site }}" width="32" height="32" loading="lazy">
+						Copyright © 2020 Exodus Services Group Inc.
 					</p>
 
 				</div>
 
-				<div class="footer__col footer__col--menu">
+				<div class="footer__right">
 
-					<div class="footer__menu">
+					<form action="/" class="footer__form">
 
-						<h4>
-							Меню
-						</h4>
+						<label for="footer-form-email" class="footer__form-label">
+							Join the Velvet and follow us!
+						</label>
 
-						<ul>
+						<input type="email" class="footer__form-input input" placeholder="Enter your email adress" id="footer-form-email">
+
+						<button class="footer__form-btn btn btn--medium">
+							Sign Up
+						</button>
+
+					</form>
+
+					<div class="footer__bottom">
+
+						<ul class="footer__links">
 
 							<li>
-								<a href="{{ urlMain }}#first-screen">О сервисе</a>
+								<a href="/">
+									Legal Notices
+								</a>
 							</li>
+
 							<li>
-								<a href="{{ urlMain }}#partner">Партнеры</a>
-							</li>
-							<li>
-								<a href="{{ urlMain }}#why-we">Преимущества</a>
-							</li>
-							<li>
-								<a href="{{ urlMain }}#review">Отзывы</a>
+								<a href="/">
+									Imprint / Licensing
+								</a>
 							</li>
 
 						</ul>
 
-					</div>
+						<div class="footer__social">
 
-					<div class="footer__menu">
+{% include "template/social.html" %}
 
-						<h4>
-							Документы
-						</h4>
-
-						<ul>
-							<li>
-								<a href="{{ url }}/docs/soglasiepd/" target="_blank">Согласия на обработку персональных данных</a>
-							</li>
-							<li>
-								<a href="{{ url }}/docs/politikapd/" target="_blank">Политика обработки персональных данных</a>
-							</li>
-							<li>
-								<a href="{{ url }}/docs/soglashenie/" target="_blank">Пользовательского соглашения</a>
-							</li>
-							<li>
-								<a href="https://datadev.ru/" target="_blank" rel="nofollow noopener">О Компании</a>
-							</li>
-						</ul>
+						</div>
 
 					</div>
 
-				</div>
 
-				<div class="footer__col footer__col--last">
-
-					<div class="footer__tel">
-
-						<h4>
-							Клиентская поддержка:
-						</h4>
-
-						<a href="tel:+74995069105">
-							+7 (499) 506 91 05
-						</a>
-
-					</div>
-
-					<div class="footer__partner">
-
-						<h4>
-							По вопросам сотрудничесва:
-						</h4>
-
-						<p>
-							<a href="mailto:partner@insur.shop">partner@insur.shop</a>
-						</p>
-
-					</div>
 
 				</div>
 
 			</div>
-
-			<p class="footer__copyright">
-				© 2020. Все права защищены.
-			</p>
 
 		</div>
 
