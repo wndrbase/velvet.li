@@ -1,6 +1,12 @@
 .process {
 
 	margin: 144px 0 96px;
+overflow: hidden;
+	@media ($mdWidth) {
+
+		margin: 120px 0;
+
+	}
 
 	&__title {
 
@@ -31,6 +37,12 @@
 	&__right {
 
 		padding-left: 130px;
+
+		@media ($mdWidth) {
+
+			padding-left: 30px;
+
+		}
 
 	}
 

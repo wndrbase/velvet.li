@@ -3,9 +3,21 @@
 	position: relative;
 	margin: 150px 0 140px;
 
+	@media ($mdWidth) {
+
+		margin: 120px 0;
+
+	}
+
 	.center {
 
 		width: 100%;
+
+		@media ($mdWidth) {
+
+			padding: 0 12px;
+
+		}
 
 	}
 

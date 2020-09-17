@@ -9,6 +9,13 @@
 		align-items: flex-start;
 		justify-content: space-between;
 
+		@media ($mdWidth) {
+
+			display: block;
+			margin: 100px 0;
+
+		}
+
 	}
 
 	&__content {
@@ -82,6 +89,13 @@
 			top: -51px;
 			right: -155px;
 
+			@media ($mdWidth) {
+
+				top: -46px;
+				right: -166px;
+
+			}
+
 		}
 
 	}
@@ -117,6 +131,35 @@
 		position: relative;
 		width: 400px;
 		height: 480px;
+		background-color: #f1e7d8;
+		border-radius: 36px;
+
+		@media ($mdWidth) {
+
+			width: 696px;
+			margin: 120px auto;
+
+		}
+
+	}
+
+	&__bg {
+
+		position: absolute;
+		left: -213px;
+		top: -30px;
+		pointer-events: none;
+
+		@media ($mdWidth) {
+
+			left: -128px;
+			right: 0;
+			top: -180px;
+			margin: auto;
+			width: 839px;
+			height: 762px;
+
+		}
 
 	}
 
@@ -125,6 +168,14 @@
 		position: absolute;
 		left: -27px;
 		bottom: 0;
+
+		@media ($mdWidth) {
+
+			left: -24px;
+			right: 0;
+			margin: auto;
+
+		}
 
 	}
 
