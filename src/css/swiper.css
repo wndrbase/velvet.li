@@ -13,28 +13,6 @@
 
 	position: relative;
 
-	.swiper-controls {
-/*
-		position: absolute;
-		top: 50%;
-		right: 0;
-		z-index: 5;
-		display: flex;
-		justify-content: space-between;
-		pointer-events: none; */
-
-		@media ($mdWidth) {
-
-
-		}
-
-		@media ($smWidth) {
-
-
-		}
-
-	}
-
 	.swiper-container {
 
 		margin: 0 auto;
@@ -92,25 +70,6 @@
 
 	}
 
-	.swiper-container--slides-per-view-auto .swiper-slide {
-
-		width: auto !important;
-		padding-left: 32px;
-
-		&:first-child {
-
-			padding-left: 0 !important;
-
-		}
-
-		@media ($smWidth) {
-
-			padding-left: 16px;
-
-		}
-
-	}
-
 	.swiper-slide-invisible-blank {
 
 		visibility: hidden;
@@ -140,101 +99,6 @@
 
 	}
 
-	.swiper-navigation {
-
-		position: relative;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		pointer-events: none;
-
-		@media ($smWidth) {
-
-		}
-
-	}
-
-	.swiper-button-prev,
-	.swiper-button-next {
-
-		z-index: 2;
-		position: relative;
-		pointer-events: auto;
-
-		border-radius: 50%;
-		width: 64px;
-		height: 64px;
-		background-color: rgba(255,255,255,.4);
-
-		@media ($mdWidth) {
-
-			width: 40px;
-			height: 40px;
-
-			svg {
-
-				width: 17px;
-				height: 16px;
-
-			}
-
-		}
-
-		svg {
-
-			fill: var(--color);
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			margin: auto;
-
-		}
-
-		&.swiper-button-disabled {
-
-			pointer-events: none;
-			opacity: 0;
-
-			svg {
-
-				opacity: 0.5;
-
-			}
-
-		}
-
-		@media ($desktop) {
-
-			&:hover {
-
-				box-shadow: 0 2px 8px rgba(34, 34, 34, 0.2);
-
-			}
-
-		}
-
-	}
-
-	.swiper-button-prev {
-
-		transform: rotate(180deg);
-
-
-	}
-
-	.swiper-button-next {
-
-
-	}
-
 	.swiper-pagination {
 
 		transition: 300ms opacity;
@@ -243,31 +107,25 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		position: relative;
-		display: none;
-		flex-grow: 1;
-
-		@media ($smWidth) {
-
-			display: flex;
-
-		}
+		display: flex;
+		position: absolute;
+		top: 120px;
+		left: 0;
+		right: 0;
+		pointer-events: auto;
 
 		.button {
 
 			background-color: var(--color);
-			opacity: .2;
-			height: 6px;
-			width: 6px;
-			transition: .3s;
-			margin: 5px;
-			border-radius: 3px;
-			pointer-events: auto;
+			width: 16px;
+			height: 4px;
+			margin: 6px;
+			opacity: 0.2;
+			transition: var(--transitionDefault);
 
 			&.is-active {
 
 				opacity: 1;
-				width: 20px;
 
 			}
 
