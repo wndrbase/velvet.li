@@ -122,7 +122,12 @@
 
 		position: relative;
 		padding-right: 132px;
-		max-width: 480px;
+
+		@media ($mdWidth) {
+
+			max-width: 480px;
+
+		}
 
 		@media ($smWidth) {
 
@@ -174,6 +179,7 @@
 
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 		margin-top: 48px;
 
 		@media ($mdWidth) {
@@ -201,7 +207,7 @@
 
 		}
 
-		a {
+		&-item {
 
 			display: block;
 			font-weight: 500;
@@ -211,6 +217,25 @@
 			border-radius: 24px;
 			white-space: nowrap;
 			padding: 0 12px;
+			color: var(--color);
+
+			&[href] {
+
+				padding-right: 36px;
+
+				&::after {
+
+					position: absolute;
+					width: 16px;
+					height: 16px;
+					content: '';
+					top: 8px;
+					right: 12px;
+					background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.667 3v1.333H3.333v7.334h7.334V8.333H12v4a.666.666 0 01-.667.667H2.667A.666.666 0 012 12.333V3.667A.667.667 0 012.667 3h4zM14 1v6l-2.53-2.529-3.999 4-.942-.942 3.999-4L8 1h6z' fill='%23412E46'/%3E%3C/svg%3E");
+
+				}
+
+			}
 
 			@media ($desktop) {
 
@@ -228,11 +253,46 @@
 
 	&__social {
 
-		@media ($smWidth) {
+		.social__item {
 
-			margin: 24px -8px 12px;
+			margin: 0 0 0 22px;
+
+			@media ($smWidth) {
+
+				margin: 24px 22px 12px 0;
+
+			}
 
 		}
+
+	}
+
+	&__tab {
+
+		&-item {
+
+			overflow: hidden;
+			max-height: 0;
+			opacity: 0;
+			transition: var(--transitionDefault);
+
+			&.is-open {
+
+				max-height: 1000px;
+				opacity: 1;
+
+			}
+
+		}
+
+		p {
+
+			font-size: 12px;
+			line-height: 19px;
+			margin: 19px 0;
+
+		}
+
 
 	}
 
