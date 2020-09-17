@@ -56,6 +56,15 @@
 
 	}
 
+	@media ($smWidth) {
+
+		font-size: 20px;
+		height: 96px;
+		line-height: 96px;
+		padding: 0 48px;
+
+	}
+
 	&--medium {
 
 		padding: 0 24px;
@@ -94,13 +103,21 @@
 
 	&--tab {
 
-		padding: 0;
+		padding: 0 !important;
 		height: 24px;
 		font-size: 20px;
 		line-height: 24px;
 		border-radius: 0;
 		color: color(var(--color) a(50%));
 		background-color: transparent !important;
+
+		@media ($smWidth) {
+
+			font-size: 16px;
+			height: 22px;
+			line-height: 22px;
+
+		}
 
 		&::after {
 
@@ -171,10 +188,23 @@
 	border-bottom: 1px solid color(var(--color) a(20%));
 	background-color: transparent;
 
+	@media ($smWidth) {
+
+		height: 46px;
+		padding: 13px 0;
+
+	}
+
 	&::placeholder {
 
 		color: var(--color);
 		opacity: .3;
+
+		@media ($smWidth) {
+
+			font-size: 14px;
+
+		}
 
 	}
 

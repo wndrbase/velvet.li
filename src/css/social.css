@@ -6,6 +6,12 @@
 
 		margin: 0 12px;
 
+		@media ($smWidth) {
+
+			margin: 0 8px;
+
+		}
+
 	}
 
 	&__link {
@@ -13,6 +19,20 @@
 		width: 24px;
 		height: 24px;
 		display: block;
+
+		@media ($smWidth) {
+
+			width: 16px;
+			height: 16px;
+
+			svg {
+
+				width: 100%;
+				height: 100%;
+
+			}
+
+		}
 
 	}
 

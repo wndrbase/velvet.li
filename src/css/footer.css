@@ -1,7 +1,8 @@
 .footer {
 
 	flex-shrink: 0;
-	background-color: color(#f9f5f0 a(50%));
+	outline:1px solid red;
+	/* background-color: color(#f9f5f0 a(50%)); */
 	margin: 24px;
 	border-radius: 24px;
 	padding: 36px 0;
@@ -13,6 +14,20 @@
 		.center {
 
 			padding: 0 24px;
+
+		}
+
+	}
+
+	@media ($smWidth) {
+
+		margin: 0;
+		border-radius: 0;
+		padding: 32px 0;
+
+		.center {
+
+			padding: 0 20px;
 
 		}
 
@@ -53,6 +68,12 @@
 
 		}
 
+		@media ($smWidth) {
+
+			margin: 24px 0;
+
+		}
+
 	}
 
 	&__copyright {
@@ -63,11 +84,26 @@
 		position: relative;
 		padding: 6px 0 6px 44px;
 
+		@media ($smWidth) {
+
+			font-size: 10px;
+			line-height: 12px;
+			padding-left: 30px;
+
+		}
+
 		img {
 
 			position: absolute;
 			top: 0;
 			left: 0;
+
+			@media ($smWidth) {
+
+				width: 24px;
+				height: 24px;
+
+			}
 
 		}
 
@@ -89,11 +125,31 @@
 		padding-right: 132px;
 		max-width: 480px;
 
+		@media ($smWidth) {
+
+			padding-right: 48px;
+
+		}
+
 		&-btn {
 
 			position: absolute;
 			right: 0;
 			bottom: 0;
+
+			@media ($smWidth) {
+
+				font-size: 0;
+				padding: 0;
+				border-radius: 8px;
+				color: transparent;
+				width: 36px;
+				height: 36px;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.782 7.333L7.206 3.757l.942-.942L13.334 8l-5.186 5.185-.942-.942 3.576-3.576H2.667V7.333h8.115z' fill='%23fff'/%3E%3C/svg%3E");
+
+			}
 
 		}
 
@@ -104,6 +160,12 @@
 			font-size: 18px;
 			line-height: 28px;
 			margin-bottom: -5px;
+
+			@media ($smWidth) {
+
+				font-size: 16px;
+
+			}
 
 		}
 
@@ -118,6 +180,13 @@
 		@media ($mdWidth) {
 
 			margin: 26px 0;
+
+		}
+
+		@media ($smWidth) {
+
+			display: block;
+			margin-bottom: 12px;
 
 		}
 
@@ -153,6 +222,16 @@
 				}
 
 			}
+
+		}
+
+	}
+
+	&__social {
+
+		@media ($smWidth) {
+
+			margin: 24px -8px 12px;
 
 		}
 

@@ -16,6 +16,12 @@
 
 		}
 
+		@media ($smWidth) {
+
+			margin: 16px 0;
+
+		}
+
 	}
 
 	&__content {
@@ -30,6 +36,14 @@
 		font-size: 60px;
 		line-height: 72px;
 		margin: 44px 0 24px;
+
+		@media ($smWidth) {
+
+			font-size: 48px;
+			line-height: 58px;
+			margin: 16px 0 11px;
+
+		}
 
 		span {
 
@@ -65,6 +79,13 @@
 		display: flex;
 		margin: 24px -12px 60px;
 
+		@media ($smWidth) {
+
+			margin: 0 -12px;
+			overflow-x: auto;
+
+		}
+
 		.btn {
 
 			margin: 12px;
@@ -77,9 +98,22 @@
 
 		margin: 36px 0;
 
+		@media ($smWidth) {
+
+			margin: 38px 0 23px;
+
+		}
+
 		.btn {
 
 			background-color: #7b4865;
+
+			@media ($smWidth) {
+
+				width: 100%;
+				max-width: 400px;
+
+			}
 
 		}
 
@@ -96,6 +130,12 @@
 
 			}
 
+			@media ($smWidth) {
+
+				display: none;
+
+			}
+
 		}
 
 	}
@@ -106,10 +146,18 @@
 		font-size: 16px;
 		line-height: 24px;
 
+		@media ($smWidth) {
+
+			font-size: 14px;
+			line-height: 17px;
+
+		}
+
 		a {
 
 			text-decoration: underline;
 			color: #3F2D44;
+			white-space: nowrap;
 			transition: var(--transitionDefault);
 
 			@media ($desktop) {
@@ -137,7 +185,15 @@
 		@media ($mdWidth) {
 
 			width: 696px;
+			max-width: 100%;
 			margin: 120px auto;
+
+		}
+
+		@media ($smWidth) {
+
+			margin: 90px 0 60px;
+			height: 240px;
 
 		}
 
@@ -158,6 +214,15 @@
 			margin: auto;
 			width: 839px;
 			height: 762px;
+
+		}
+
+		@media ($smWidth) {
+
+			width: 467px;
+			height: 424px;
+			top: -76px;
+			left: -134px;
 
 		}
 

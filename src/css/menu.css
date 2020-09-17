@@ -1,5 +1,11 @@
 .menu {
 
+	@media ($smWidth) {
+
+		display: none;
+
+	}
+
 	&__list {
 
 		display: flex;

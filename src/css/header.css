@@ -3,24 +3,30 @@
 	position: relative;
 	padding: 38px 0;
 
+	@media ($smWidth) {
+
+		padding: 20px 0;
+
+	}
+
 	.center {
 
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 
-		@media ($smWidth) {
-
-			width: 100%;
-			display: block;
-
-		}
-
 	}
 
 	&__logo {
 
 		@media ($smWidth) {
+
+			img {
+
+				width: 96px;
+				height: 30px;
+
+			}
 
 		}
 
@@ -70,14 +76,14 @@
 
 		&::before {
 
-			bottom: 14px;
+			bottom: 8px;
 			content: '';
 
 		}
 
 		&::after {
 
-			top: 14px;
+			top: 8px;
 			content: '';
 
 		}
@@ -112,11 +118,8 @@
 
 	.menu-show {
 
-		background-color: #fff;
-
 		.main,
-		.footer,
-		.header__logo {
+		.footer {
 
 			display: none;
 
