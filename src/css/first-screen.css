@@ -86,6 +86,12 @@
 
 		}
 
+		@media ($xsWidth) {
+
+			margin: 0 -10px;
+
+		}
+
 		.btn {
 
 			margin: 12px;
@@ -223,6 +229,12 @@
 			height: 424px;
 			top: -76px;
 			left: -134px;
+
+		}
+
+		@media ($xsWidth) {
+
+			left: -164px;
 
 		}
 

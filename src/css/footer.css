@@ -91,6 +91,12 @@
 
 		}
 
+		@media ($xsWidth) {
+
+			padding-left: 0;
+
+		}
+
 		img {
 
 			position: absolute;
@@ -101,6 +107,12 @@
 
 				width: 24px;
 				height: 24px;
+
+			}
+
+			@media ($xsWidth) {
+
+				display: none;
 
 			}
 
@@ -168,6 +180,12 @@
 			@media ($smWidth) {
 
 				font-size: 16px;
+
+			}
+
+			@media ($xsWidth) {
+
+				white-space: nowrap;
 
 			}
 
