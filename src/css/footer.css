@@ -191,7 +191,6 @@
 		@media ($smWidth) {
 
 			display: block;
-			margin-bottom: 12px;
 
 		}
 
@@ -205,6 +204,12 @@
 		li {
 
 			margin-right: 12px;
+
+			@media ($smWidth) {
+
+				margin-bottom: 12px;
+
+			}
 
 		}
 
