@@ -15,3 +15,6 @@
 @import url(first-screen.css);
 @import url(percents.css);
 @import url(process.css);
+
+@import url(breadcrumbs.css);
+@import url(page-text.css);

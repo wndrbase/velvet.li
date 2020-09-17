@@ -111,18 +111,23 @@
 		&-progress {
 
 			position: absolute;
-			top: 4px;
+			top: 48px;
 			left: 0;
 			right: 0;
 			display: flex;
-			justify-content: center;
 			font-size: 18px;
 			pointer-events: none;
+
+			width: 690px;
+			max-width: 100%;
+			margin: 0 auto;
+			padding: 0 6px;
 
 			@media ($smWidth) {
 
 				font-size: 14px;
 				top: 80px;
+				justify-content: center;
 
 			}
 
@@ -143,7 +148,7 @@
 
 		.swiper-pagination {
 
-			top: 10px;
+			top: 50px;
 			width: 690px;
 			max-width: 100%;
 			margin: 0 auto;
@@ -214,7 +219,7 @@
 
 		img {
 
-			margin: 36px auto 0;
+			margin: 50px auto 0;
 			display: block;
 			width: 690px;
 			height: auto;
