@@ -45,6 +45,24 @@
 
 	}
 
+	&__btns {
+
+		display: flex;
+
+		@media ($smWidth) {
+
+			display: none;
+
+		}
+
+		.btn {
+
+			margin-left: 12px;
+
+		}
+
+	}
+
 }
 
 @media ($smWidth) {

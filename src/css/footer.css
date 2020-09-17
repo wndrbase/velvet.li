@@ -200,6 +200,7 @@
 	&__links {
 
 		display: flex;
+		flex-wrap: wrap;
 
 		li {
 
@@ -213,11 +214,18 @@
 			font-weight: 500;
 			font-size: 12px;
 			line-height: 30px;
-			border: 1px solid;
+			border: 1px solid var(--color);
 			border-radius: 24px;
 			white-space: nowrap;
 			padding: 0 12px;
 			color: var(--color);
+
+			&.is-open {
+
+				background-color: var(--color);
+				color: #fff;
+
+			}
 
 			&[href] {
 
@@ -241,7 +249,6 @@
 
 				&:hover {
 
-					background-color: color(#f9f5f0 a(50%));
 
 				}
 
@@ -292,7 +299,6 @@
 			margin: 19px 0;
 
 		}
-
 
 	}
 
