@@ -43,109 +43,51 @@
 
 		}
 
+		@media ($smWidth) {
+
+			width: auto;
+			margin-right: 20px;
+
+		}
+
 	}
 
 	&__btns {
 
 		display: flex;
 
-		@media ($smWidth) {
-
-			display: none;
-
-		}
-
 		.btn {
 
 			margin-left: 12px;
 
-		}
+			svg {
 
-	}
-
-}
-
-@media ($smWidth) {
-
-	.btn-menu-toggle {
-
-		width: 28px;
-		height: 28px;
-		position: absolute;
-		top: 0;
-		right: 18px;
-
-		span,
-		&::after,
-		&::before {
-
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			margin: auto;
-			width: 24px;
-			height: 3px;
-			transition: .3s;
-			background-color: var(--color);
-
-		}
-
-		&::before {
-
-			bottom: 8px;
-			content: '';
-
-		}
-
-		&::after {
-
-			top: 8px;
-			content: '';
-
-		}
-
-		.menu-show & {
-
-			span {
-
-				transform: scale(0) rotate(360deg);
-
-			}
-
-			&::before {
-
-				transform: rotate(225deg);
-				bottom: 0;
-				width: 22px;
-
-			}
-
-			&::after {
-
-				transform: rotate(-225deg);
+				display: none;
+				fill: #fff;
+				position: absolute;
 				top: 0;
-				width: 22px;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
 
 			}
 
-		}
+			@media ($smWidth) {
 
-	}
+				width: 30px;
+				height: 30px;
+				color: transparent;
+				padding: 0;
+				border-radius: 6px;
 
-	.menu-show {
+				svg {
 
-		.main,
-		.footer {
+					display: block;
 
-			display: none;
+				}
 
-		}
-
-		.menu {
-
-			display: block !important;
+			}
 
 		}
 

@@ -218,10 +218,11 @@
 
 		display: flex;
 		flex-wrap: wrap;
+		margin-left: -12px;
 
 		li {
 
-			margin-right: 12px;
+			margin-left: 12px;
 
 			@media ($smWidth) {
 
@@ -289,7 +290,18 @@
 
 			@media ($smWidth) {
 
-				margin: 24px 22px 12px 0;
+				margin: 12px 22px 0 0;
+
+			}
+
+		}
+
+		.social__link {
+
+			@media ($smWidth) {
+
+				width: 16px;
+				height: 16px;
 
 			}
 
@@ -313,13 +325,13 @@
 
 			}
 
-		}
+			p {
 
-		p {
+				font-size: 12px;
+				line-height: 19px;
+				margin: 19px 0;
 
-			font-size: 12px;
-			line-height: 19px;
-			margin: 19px 0;
+			}
 
 		}
 
