@@ -274,13 +274,13 @@
 
 	&--border {
 
-		height: 68px;
+		height: 68px !important;
 		background-color: #ECEAED;
 		border: 1px solid #C9C4CB;
 		border-radius: 8px;
 		font-size: 16px;
 		line-height: 20px;
-		padding: 24px;
+		padding: 24px !important;
 
 		& + svg {
 
