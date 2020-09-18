@@ -51,7 +51,7 @@
 			position: relative;
 			overflow: hidden;
 			display: inline-block;
-			vertical-align: baseline;
+			vertical-align: bottom;
 
 			&::after,
 			&::before {
@@ -67,8 +67,6 @@
 
 			&::after {
 
-				left: 100%;
-				opacity: 0;
 				animation-name: dataWordEven;
 
 			}

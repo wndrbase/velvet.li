@@ -57,7 +57,48 @@
 
 	&__row {
 
-		display: flex;
+		position: relative;
+		height: 144px;
+
+		@media ($smWidth) {
+
+			height: 84px;
+
+		}
+
+		&-inner {
+
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: flex;
+			animation: loop 60s linear infinite;
+			animation-play-state: paused;
+
+			& + & {
+
+				.percents__item:first-child {
+
+					margin-left: 100%;
+
+				}
+
+			}
+
+		}
+
+		&:nth-child(2) &-inner {
+
+			animation-duration: 50s;
+			animation-direction: reverse;
+
+		}
+
+	}
+
+	&.in-viewport &__row-inner {
+
+		animation-play-state: running;
 
 	}
 
@@ -89,6 +130,18 @@
 
 		}
 
+	}
+
+}
+
+
+@keyframes loop {
+
+	0% {
+		transform: translate3d(-100%, 0, 0);
+	}
+	100% {
+		transform: translate3d(0%, 0, 0);
 	}
 
 }
