@@ -23,23 +23,23 @@
 
 				<div class="first-screen__tabs">
 
-					<button class="btn btn--tab is-active" type="button">
+					<button class="btn btn--tab is-active" type="button" data-picture="youtube">
 						YouTube
 					</button>
 
-					<button class="btn btn--tab" type="button">
+					<button class="btn btn--tab" type="button" data-picture="exchange">
 						Exchange of Goods
 					</button>
 
-					<button class="btn btn--tab" type="button">
+					<button class="btn btn--tab" type="button" data-picture="startup">
 						Startup
 					</button>
 
-					<button class="btn btn--tab" type="button">
+					<button class="btn btn--tab" type="button" data-picture="podcast">
 						Podcast
 					</button>
 
-					<button class="btn btn--tab" type="button">
+					<button class="btn btn--tab" type="button" data-picture="event">
 						Event
 					</button>
 
@@ -64,22 +64,110 @@
 
 			<div class="first-screen__img">
 
-				<img class="first-screen__bg" src="/img/first-screen/bg.svg" alt="" width="673" height="611" loading="lazy">
+				<div class="first-screen__img-tab first-screen__youtube is-active">
 
-				<picture>
+					<img class="first-screen__bg" src="/img/first-screen/bg.svg" alt="" width="673" height="611" loading="lazy">
 
-					<source srcset="/img/first-screen/img--mobile.webp 1x, /img/first-screen/img--mobile@2x.webp 2x" type="image/webp" media="(max-width: 767px)">
-					<source srcset="/img/first-screen/img--mobile.png 1x, /img/first-screen/img--mobile@2x.png 2x" media="(max-width: 767px)">
+					<picture>
 
-					<source srcset="/img/first-screen/img--tablet.webp 1x, /img/first-screen/img--tablet@2x.webp 2x" type="image/webp" media="(max-width: 1199px)">
-					<source srcset="/img/first-screen/img--tablet.png 1x, /img/first-screen/img--tablet@2x.png 2x" media="(max-width: 1199px)">
+						<source srcset="/img/first-screen/youtube/img--mobile.webp 1x, /img/first-screen/youtube/img--mobile@2x.webp 2x" type="image/webp" media="(max-width: 767px)">
+						<source srcset="/img/first-screen/youtube/img--mobile.png 1x, /img/first-screen/youtube/img--mobile@2x.png 2x" media="(max-width: 767px)">
 
-					<source srcset="/img/first-screen/img.webp 1x, /img/first-screen/img@2x.webp 2x" type="image/webp">
-					<source srcset="/img/first-screen/img.png 1x, /img/first-screen/img@2x.png 2x">
+						<source srcset="/img/first-screen/youtube/img--tablet.webp 1x, /img/first-screen/youtube/img--tablet@2x.webp 2x" type="image/webp" media="(max-width: 1199px)">
+						<source srcset="/img/first-screen/youtube/img--tablet.png 1x, /img/first-screen/youtube/img--tablet@2x.png 2x" media="(max-width: 1199px)">
 
-					<img class="first-screen__picture" src="/img/first-screen/img.png" alt="{{ site }}" loading="lazy">
+						<source srcset="/img/first-screen/youtube/img.webp 1x, /img/first-screen/youtube/img@2x.webp 2x" type="image/webp">
+						<source srcset="/img/first-screen/youtube/img.png 1x, /img/first-screen/youtube/img@2x.png 2x">
 
-				</picture>
+						<img class="first-screen__picture" src="/img/first-screen/youtube/img.png" alt="{{ site }} youtube" loading="lazy">
+
+					</picture>
+
+				</div>
+
+				<div class="first-screen__img-tab first-screen__exchange">
+
+					<img class="first-screen__bg" src="/img/first-screen/bg.svg" alt="" width="673" height="611" loading="lazy">
+
+					<picture>
+
+						<source srcset="/img/first-screen/exchange/img--mobile.webp 1x, /img/first-screen/exchange/img--mobile@2x.webp 2x" type="image/webp" media="(max-width: 767px)">
+						<source srcset="/img/first-screen/exchange/img--mobile.png 1x, /img/first-screen/exchange/img--mobile@2x.png 2x" media="(max-width: 767px)">
+
+						<source srcset="/img/first-screen/exchange/img--tablet.webp 1x, /img/first-screen/exchange/img--tablet@2x.webp 2x" type="image/webp" media="(max-width: 1199px)">
+						<source srcset="/img/first-screen/exchange/img--tablet.png 1x, /img/first-screen/exchange/img--tablet@2x.png 2x" media="(max-width: 1199px)">
+
+						<source srcset="/img/first-screen/exchange/img.webp 1x, /img/first-screen/exchange/img@2x.webp 2x" type="image/webp">
+						<source srcset="/img/first-screen/exchange/img.png 1x, /img/first-screen/exchange/img@2x.png 2x">
+
+						<img class="first-screen__picture" src="/img/first-screen/exchange/img.png" alt="{{ site }} Exchange of Goods" loading="lazy">
+
+					</picture>
+
+				</div>
+
+				<div class="first-screen__img-tab first-screen__startup">
+
+					<img class="first-screen__bg" src="/img/first-screen/bg.svg" alt="" width="673" height="611" loading="lazy">
+
+					<picture>
+
+						<source srcset="/img/first-screen/startup/img--mobile.webp 1x, /img/first-screen/startup/img--mobile@2x.webp 2x" type="image/webp" media="(max-width: 767px)">
+						<source srcset="/img/first-screen/startup/img--mobile.png 1x, /img/first-screen/startup/img--mobile@2x.png 2x" media="(max-width: 767px)">
+
+						<source srcset="/img/first-screen/startup/img--tablet.webp 1x, /img/first-screen/startup/img--tablet@2x.webp 2x" type="image/webp" media="(max-width: 1199px)">
+						<source srcset="/img/first-screen/startup/img--tablet.png 1x, /img/first-screen/startup/img--tablet@2x.png 2x" media="(max-width: 1199px)">
+
+						<source srcset="/img/first-screen/startup/img.webp 1x, /img/first-screen/startup/img@2x.webp 2x" type="image/webp">
+						<source srcset="/img/first-screen/startup/img.png 1x, /img/first-screen/startup/img@2x.png 2x">
+
+						<img class="first-screen__picture" src="/img/first-screen/startup/img.png" alt="{{ site }} startup" loading="lazy">
+
+					</picture>
+
+				</div>
+
+				<div class="first-screen__img-tab first-screen__podcast">
+
+					<img class="first-screen__bg" src="/img/first-screen/bg.svg" alt="" width="673" height="611" loading="lazy">
+
+					<picture>
+
+						<source srcset="/img/first-screen/podcast/img--mobile.webp 1x, /img/first-screen/podcast/img--mobile@2x.webp 2x" type="image/webp" media="(max-width: 767px)">
+						<source srcset="/img/first-screen/podcast/img--mobile.png 1x, /img/first-screen/podcast/img--mobile@2x.png 2x" media="(max-width: 767px)">
+
+						<source srcset="/img/first-screen/podcast/img--tablet.webp 1x, /img/first-screen/podcast/img--tablet@2x.webp 2x" type="image/webp" media="(max-width: 1199px)">
+						<source srcset="/img/first-screen/podcast/img--tablet.png 1x, /img/first-screen/podcast/img--tablet@2x.png 2x" media="(max-width: 1199px)">
+
+						<source srcset="/img/first-screen/podcast/img.webp 1x, /img/first-screen/podcast/img@2x.webp 2x" type="image/webp">
+						<source srcset="/img/first-screen/podcast/img.png 1x, /img/first-screen/podcast/img@2x.png 2x">
+
+						<img class="first-screen__picture" src="/img/first-screen/podcast/img.png" alt="{{ site }} podcast" loading="lazy">
+
+					</picture>
+
+				</div>
+
+				<div class="first-screen__img-tab first-screen__event">
+
+					<img class="first-screen__bg" src="/img/first-screen/bg.svg" alt="" width="673" height="611" loading="lazy">
+
+					<picture>
+
+						<source srcset="/img/first-screen/event/img--mobile.webp 1x, /img/first-screen/event/img--mobile@2x.webp 2x" type="image/webp" media="(max-width: 767px)">
+						<source srcset="/img/first-screen/event/img--mobile.png 1x, /img/first-screen/event/img--mobile@2x.png 2x" media="(max-width: 767px)">
+
+						<source srcset="/img/first-screen/event/img--tablet.webp 1x, /img/first-screen/event/img--tablet@2x.webp 2x" type="image/webp" media="(max-width: 1199px)">
+						<source srcset="/img/first-screen/event/img--tablet.png 1x, /img/first-screen/event/img--tablet@2x.png 2x" media="(max-width: 1199px)">
+
+						<source srcset="/img/first-screen/event/img.webp 1x, /img/first-screen/event/img@2x.webp 2x" type="image/webp">
+						<source srcset="/img/first-screen/event/img.png 1x, /img/first-screen/event/img@2x.png 2x">
+
+						<img class="first-screen__picture" src="/img/first-screen/event/img.png" alt="{{ site }} event" loading="lazy">
+
+					</picture>
+
+				</div>
 
 			</div>
 

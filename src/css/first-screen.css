@@ -1,6 +1,7 @@
 .first-screen {
 
 	position: relative;
+	overflow: hidden;
 
 	&__wrap {
 
@@ -193,8 +194,6 @@
 		position: relative;
 		width: 400px;
 		height: 480px;
-		background-color: #f1e7d8;
-		border-radius: 36px;
 
 		@media ($mdWidth) {
 
@@ -210,6 +209,58 @@
 			height: 240px;
 
 		}
+
+		&-tab {
+
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			border-radius: 36px;
+			transition: var(--transitionDefault);
+			transform: scaleY(1.2);
+
+			&.is-active {
+
+				opacity: 1;
+				z-index: 1;
+				transform: scaleY(1.0);
+
+			}
+
+		}
+
+	}
+
+	&__youtube {
+
+		background-color: color(#B8893E a(20%));
+
+	}
+
+	&__exchange {
+
+		background-color: color(#959F68 a(20%));
+
+	}
+
+	&__startup {
+
+		background-color: color(#EB4504 a(20%));
+
+	}
+
+	&__podcast {
+
+		background-color: color(#AB6E4D a(20%));
+
+	}
+
+	&__event {
+
+		background-color: color(#3F2D44 a(20%));
 
 	}
 
