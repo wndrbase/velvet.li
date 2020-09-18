@@ -40,17 +40,24 @@
 
 	&__left {
 
-		width: 410px;
-		height: 452px;
 		flex-shrink: 0;
 		position: relative;
-		margin-top: 30px;
+		width: 100%;
+
+		@media ($desktop) {
+
+			width: 480px;
+			height: 480px;
+			overflow: hidden;
+			margin-top: 30px;
+
+		}
 
 	}
 
 	&__right {
 
-		padding-left: 130px;
+		padding-left: 60px;
 
 		@media ($mdWidth) {
 
@@ -68,6 +75,16 @@
 		padding-left: 48px;
 		margin: 24px 0;
 		opacity: .5;
+
+		svg {
+
+			position: absolute;
+			top: -7px;
+			left: -7px;
+			opacity: 0;
+			transform: rotate(-90deg);
+
+		}
 
 		&-ico {
 
@@ -100,6 +117,12 @@
 
 			opacity: 1;
 
+			svg {
+
+				opacity: 1;
+
+			}
+
 		}
 
 	}
@@ -108,20 +131,36 @@
 
 		position: relative;
 
+		@media ($desktop) {
+
+			pointer-events: none;
+
+			.swiper-pagination {
+
+				display: none;
+
+			}
+
+		}
+
 		&-progress {
 
 			position: absolute;
 			top: 48px;
 			left: 0;
 			right: 0;
-			display: flex;
 			font-size: 18px;
 			pointer-events: none;
 
-			width: 690px;
-			max-width: 100%;
 			margin: 0 auto;
 			padding: 0 6px;
+			display: none;
+
+			@media ($mdWidth) {
+
+				display: flex;
+
+			}
 
 			@media ($smWidth) {
 
@@ -149,14 +188,12 @@
 		.swiper-pagination {
 
 			top: 50px;
-			width: 690px;
-			max-width: 100%;
-			margin: 0 auto;
-			justify-content: flex-end;
+			right: 0;
 
 			@media ($smWidth) {
 
 				top: 120px;
+				left: 0;
 				justify-content: center;
 
 			}
@@ -180,8 +217,14 @@
 			font-size: 16px;
 			line-height: 24px;
 			color: var(--color);
-			display: flex;
+			display: none;
 			align-items: center;
+
+			@media ($mdWidth) {
+
+				display: flex;
+
+			}
 
 			@media ($smWidth) {
 
@@ -219,10 +262,17 @@
 
 		img {
 
-			margin: 50px auto 0;
+			margin: 0 auto;
 			display: block;
-			width: 690px;
+			width: 480px;
 			height: auto;
+
+			@media ($mdWidth) {
+
+				width: 690px;
+				margin-top: 50px;
+
+			}
 
 			@media ($smWidth) {
 
