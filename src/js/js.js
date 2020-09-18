@@ -46,6 +46,13 @@ https://github.com/htmlpluscss/
 	window.addEventListener("DOMContentLoaded", () => PubSub.publish('DOMContentLoaded'));
 	window.addEventListener("load", () => PubSub.publish('pageLoad'));
 
+	if(document.querySelector('.scroll-up')) {
+
+		document.querySelector('.scroll-up').addEventListener('click', () =>
+			window.scrollTo({top: 0, behavior: 'smooth'}));
+
+	}
+
 	// обработчик анимаций
 	VELVET.cssAnimation = a => {var b,c,d=document.createElement("cssanimation");switch(a){case'animation':b={"animation":"animationend","OAnimation":"oAnimationEnd","MozAnimation":"animationend","WebkitAnimation":"webkitAnimationEnd"};break;case'transition':b={"transition":"transitionend","OTransition":"oTransitionEnd","MozTransition":"transitionend","WebkitTransition":"webkitTransitionEnd"}}for(c in b)if(d.style[c]!==undefined)return b[c]};
 

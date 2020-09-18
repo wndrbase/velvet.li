@@ -8,23 +8,23 @@
 
 	}
 
-/*	const items = modal.querySelectorAll('.modal__item'),
+	const items = modal.querySelectorAll('.modal__item'),
 		  btns = document.querySelectorAll('[data-modal]'),
 		  wrapper = document.querySelector('.wrapper');
 
 	let windowScroll = window.pageYOffset;
 
-	modal.addEventListener('click', (e) => {
+	modal.addEventListener('click', event => {
 
-		if(e.target.classList.contains('modal') || e.target.closest('.modal__close')){
+		if(event.target.classList.contains('modal') || event.target.closest('.modal__close')){
 
-			PP.hideModal();
+			VELVET.hideModal();
 
 		}
 
 	});
 
-	PP.hideModal = () => {
+	VELVET.hideModal = () => {
 
 		modal.classList.add('visuallyhidden');
 
@@ -34,25 +34,25 @@
 
 		setTimeout( () => document.documentElement.classList.remove('scroll-behavior-off'));
 
-		PubSub.publish('hideModal', PP.activeModal);
+		PubSub.publish('hideModal', VELVET.activeModal);
 
-		PP.activeModal = false;
+		VELVET.activeModal = false;
 
 	};
 
-	PP.modalShow = (selector)=>{
+	VELVET.modalShow = selector => {
 
-		if(!PP.activeModal){
+		if(!VELVET.activeModal){
 
 			windowScroll = window.pageYOffset;
 
 		}
 
-		PP.activeModal = modal.querySelector('.modal__item--' + selector);
+		VELVET.activeModal = modal.querySelector('.modal__item--' + selector);
 
-		Array.prototype.forEach.call(items, (el) => {
+		Array.from(items, el => {
 
-			el.classList.toggle('visuallyhidden', el !== PP.activeModal);
+			el.classList.toggle('visuallyhidden', el !== VELVET.activeModal);
 
 		});
 
@@ -67,7 +67,7 @@
 			document.body.classList.add('modal-show');
 			window.scrollTo(0,0);
 
-			PP.activeModal.focus();
+			VELVET.activeModal.focus();
 
 			PubSub.publish('modalShow', selector);
 
@@ -75,8 +75,8 @@
 
 	};
 
-	Array.prototype.forEach.call(btns,(el)=>
+	Array.from(btns, el =>
 		el.addEventListener('click',()=>
-			PP.modalShow(el.getAttribute('data-modal'))));
-*/
+			VELVET.modalShow(el.getAttribute('data-modal'))));
+
 })(document.querySelector('.modal'));

@@ -2,37 +2,41 @@
 
 		<div class="modal__box">
 
-			<div class="modal__item modal__item--login">
+			<div class="modal__item modal__item--subscribe">
 
-				<form class="modal-form form" action="/" novalidate="novalidate">
+				<form class="modal-form form-subscribe" action="/">
 
-					<div class="form__done-hidden">
+					<p class="modal-form__text">
+						If you are interested in our services as client or partner, please submit your email address below and we will contact you as soon as we are live.
+					</p>
 
-						<h3 class="modal-form__title">
-							Login
-						</h3>
+					<div class="modal-form__input">
 
-						<p class="modal-form__text">
-							Welcome to Paypugs Client Portal.
-						</p>
+						<input class="input input--border form-subscribe__input" placeholder="Enter your email adress" required="required" aria-label="Email" type="email">
 
-						<div class="modal-form__input">
-
-							<input class="input" placeholder="Email" required="required" aria-label="Email" type="email">
-
-						</div>
-
-						<div class="modal-form__input">
-
-							<input class="input" placeholder="Password" required="required" aria-label="Password">
-
-						</div>
-
-						<button class="modal-form__btn btn form__submit">
-							Send
-						</button>
+						<svg width="24" height="24" viewBox="0 0 24 24" >
+							<path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-5-9a5 5 0 1010 0h-2a3 3 0 01-6 0H7zm1-2a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm8 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
+						</svg>
 
 					</div>
+
+					<div class="modal-form__input">
+
+						<label class="checkbox">
+
+							<input type="checkbox" class="checkbox__input" required="required">
+
+							<span class="checkbox__label">
+								I understand and consent to the following <a href="/" target="_blank">Privacy Notice</a>
+							</span>
+
+						</label>
+
+					</div>
+
+					<button class="modal-form__btn btn btn--middle form-subscribe__submit">
+						Subscribe
+					</button>
 
 				</form>
 
