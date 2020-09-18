@@ -47,19 +47,29 @@
 
 		span {
 
-			color: color(var(--color) a(50%));
+			color: transparent;
 			position: relative;
+			overflow: hidden;
+			display: inline-block;
+			vertical-align: baseline;
+
+			&::after,
+			&::before {
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				content: attr(data-word-1);
+				color: color(var(--color) a(50%));
+				animation: dataWordOdd 10s infinite;
+
+			}
 
 			&::after {
 
-				position: absolute;
-				width: 2px;
-				top: 20px;
-				right: 1px;
-				bottom: 14px;
-				content: '';
-				background-color: var(--color);
-				animation: cursor 0.8s infinite;
+				left: 100%;
+				opacity: 0;
+				animation-name: dataWordEven;
 
 			}
 
@@ -258,13 +268,227 @@
 
 }
 
-@keyframes cursor {
+@keyframes dataWordOdd {
 
+	0% {
+		transform: translateY(0);
+	}
+	10% {
+		opacity: 1;
+		content: attr(data-word-1);
+		transform: translateY(100%);
+	}
+
+	10.1% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	10.2% {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+	10.3% {
+		opacity: 1;
+		content: attr(data-word-3);
+		transform: translateY(-100%);
+	}
+
+	20% {
+		transform: translateY(0);
+	}
+	30% {
+		opacity: 1;
+		content: attr(data-word-3);
+		transform: translateY(100%);
+	}
+	30.1% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	30.2% {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+	30.3% {
+		opacity: 1;
+		content: attr(data-word-5);
+		transform: translateY(-100%);
+	}
+
+	40% {
+		transform: translateY(0);
+	}
 	50% {
 		opacity: 1;
+		content: attr(data-word-5);
+		transform: translateY(100%);
+	}
+	50.1% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	50.2% {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+	50.3% {
+		opacity: 1;
+		content: attr(data-word-2);
+		transform: translateY(-100%);
+	}
+
+	60% {
+		transform: translateY(0);
+	}
+	70% {
+		opacity: 1;
+		content: attr(data-word-2);
+		transform: translateY(100%);
+	}
+	70.1% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	70.2% {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+	70.3% {
+		opacity: 1;
+		content: attr(data-word-4);
+		transform: translateY(-100%);
+	}
+
+	80% {
+		transform: translateY(0);
+	}
+	90% {
+		opacity: 1;
+		content: attr(data-word-4);
+		transform: translateY(100%);
+	}
+	90.1% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	90.2% {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+	90.3% {
+		opacity: 1;
+		content: attr(data-word-1);
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+
+}
+
+@keyframes dataWordEven {
+
+	0% {
+		opacity: 1;
+		content: attr(data-word-2);
+		transform: translateY(-100%);
+	}
+	10% {
+		transform: translateY(0);
+	}
+	20% {
+		opacity: 1;
+		content: attr(data-word-2);
+		transform: translateY(100%);
+	}
+
+	20.1% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	20.2% {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+	20.3% {
+		opacity: 1;
+		content: attr(data-word-4);
+		transform: translateY(-100%);
+	}
+
+	30% {
+		transform: translateY(0);
+	}
+	40% {
+		opacity: 1;
+		content: attr(data-word-4);
+		transform: translateY(100%);
+	}
+	40.1% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	40.2% {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+	40.3% {
+		opacity: 1;
+		content: attr(data-word-1);
+		transform: translateY(-100%);
+	}
+
+	50% {
+		transform: translateY(0);
+	}
+	60% {
+		opacity: 1;
+		content: attr(data-word-1);
+		transform: translateY(100%);
+	}
+	60.1% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	60.2% {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+	60.3% {
+		opacity: 1;
+		content: attr(data-word-3);
+		transform: translateY(-100%);
+	}
+
+	70% {
+		transform: translateY(0);
 	}
 	80% {
+		opacity: 1;
+		content: attr(data-word-3);
+		transform: translateY(100%);
+	}
+	80.1% {
 		opacity: 0;
+		transform: translateY(100%);
+	}
+	80.2% {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+	80.3% {
+		opacity: 1;
+		content: attr(data-word-5);
+		transform: translateY(-100%);
+	}
+
+	90% {
+		transform: translateY(0);
+	}
+	100% {
+		opacity: 1;
+		content: attr(data-word-5);
+		transform: translateY(100%);
 	}
 
 }
