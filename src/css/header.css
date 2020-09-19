@@ -79,6 +79,7 @@
 				height: 30px;
 				color: transparent;
 				padding: 0;
+				font-size: 0;
 				border-radius: 6px;
 
 				svg {

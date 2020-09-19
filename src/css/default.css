@@ -104,6 +104,60 @@ table {
 
 }
 
+
+.fade-in {
+
+	opacity: 0.01;
+	transform: translateY(40px);
+	transition: transform 1.5s cubic-bezier(.19,1,.22,1), opacity 1s cubic-bezier(.19,1,.22,1);
+	transition-delay: .2s;
+	will-change: transform;
+
+	&.is-show {
+
+		transform: translateY(0);
+		opacity: 1;
+
+	}
+
+	&--100 {
+
+		transition-delay: 0.1s;
+
+	}
+
+	&--200 {
+
+		transition-delay: 0.2s;
+
+	}
+
+	&--300 {
+
+		transition-delay: 0.3s;
+
+	}
+
+	&--400 {
+
+		transition-delay: 0.4s;
+
+	}
+
+	&--500 {
+
+		transition-delay: 0.5s;
+
+	}
+
+	&--600 {
+
+		transition-delay: 0.6s;
+
+	}
+
+}
+
 /*
 -----------------------------------------------------------------------------*/
 .notsel {

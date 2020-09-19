@@ -63,6 +63,7 @@
 				content: attr(data-word-1);
 				color: color(var(--color) a(50%));
 				animation: dataWordOdd 10s infinite;
+				animation-delay: 2s;
 
 			}
 
