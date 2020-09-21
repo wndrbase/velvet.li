@@ -1,25 +1,29 @@
 .first-screen {
 
 	position: relative;
-	overflow: hidden;
+	margin: 56px 0 150px;
+
+	@media ($mdWidth) {
+
+		margin: 100px 0;
+
+	}
+
+	@media ($smWidth) {
+
+		margin: 16px 0;
+
+	}
 
 	&__wrap {
 
 		display: flex;
-		margin: 56px 0 150px;
 		align-items: flex-start;
 		justify-content: space-between;
 
 		@media ($mdWidth) {
 
 			display: block;
-			margin: 100px 0;
-
-		}
-
-		@media ($smWidth) {
-
-			margin: 16px 0;
 
 		}
 

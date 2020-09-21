@@ -17,6 +17,8 @@
 					entry.target.classList.add('is-show');
 					observer.unobserve(entry.target);
 
+					setTimeout( ()=> entry.target.classList.remove('fade-in', 'is-show'), 1000);
+
 				}
 
 			});
