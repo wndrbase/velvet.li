@@ -31,6 +31,8 @@
 					_btn.classList.toggle('is-open', _btn === btn);
 					items[index].classList.toggle('is-open', _btn === btn);
 
+					setTimeout( () => window.scrollTo({top: window.pageYOffset + window.innerHeight, behavior: 'smooth'}), 100);
+
 				}
 
 			});
