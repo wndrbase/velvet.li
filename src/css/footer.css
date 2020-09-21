@@ -269,15 +269,6 @@
 
 			}
 
-			@media ($desktop) {
-
-				&:hover {
-
-
-				}
-
-			}
-
 		}
 
 	}
@@ -330,6 +321,23 @@
 				font-size: 12px;
 				line-height: 19px;
 				margin: 19px 0;
+
+			}
+
+			@media ($desktop) {
+
+				a {
+
+					text-decoration: underline;
+
+					&:hover {
+
+						text-decoration: none;
+
+					}
+
+
+				}
 
 			}
 
