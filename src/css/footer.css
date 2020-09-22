@@ -46,32 +46,11 @@
 
 	}
 
-	&__left {
-
-		width: 480px;
-		max-width: 100%;
-		display: flex;
-		flex-direction: column;
-
-	}
-
 	&__text {
 
 		font-size: 12px;
 		line-height: 19px;
-		color: #A096A2;
-
-		@media ($mdWidth) {
-
-			margin: 36px 0 26px;
-
-		}
-
-		@media ($smWidth) {
-
-			margin: 24px 0;
-
-		}
+		margin: 19px 0;
 
 	}
 
@@ -81,7 +60,7 @@
 		line-height: 20px;
 		margin-top: auto;
 		position: relative;
-		padding: 6px 0 6px 44px;
+		padding: 8px 0 8px 48px;
 
 		@media ($smWidth) {
 
@@ -120,115 +99,34 @@
 
 	}
 
-	&__right {
-
-		@media ($desktop) {
-
-			width: 540px;
-
-		}
-
-	}
-
-	&__form {
-
-		position: relative;
-		padding-right: 132px;
-
-		@media ($mdWidth) {
-
-			max-width: 480px;
-
-		}
-
-		@media ($smWidth) {
-
-			padding-right: 48px;
-
-		}
-
-		&-btn {
-
-			position: absolute;
-			right: 0;
-			bottom: 0;
-
-			@media ($smWidth) {
-
-				font-size: 0;
-				padding: 0;
-				border-radius: 8px;
-				color: transparent;
-				width: 36px;
-				height: 36px;
-				background-position: center;
-				background-repeat: no-repeat;
-				background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.782 7.333L7.206 3.757l.942-.942L13.334 8l-5.186 5.185-.942-.942 3.576-3.576H2.667V7.333h8.115z' fill='%23fff'/%3E%3C/svg%3E");
-
-			}
-
-		}
-
-		&-label {
-
-			display: block;
-			font-weight: 500;
-			font-size: 18px;
-			line-height: 28px;
-			margin-bottom: -5px;
-
-			@media ($smWidth) {
-
-				font-size: 16px;
-
-			}
-
-			@media ($xsWidth) {
-
-				white-space: nowrap;
-
-			}
-
-		}
-
-	}
-
-	&__bottom {
-
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		margin-top: 48px;
-
-		@media ($mdWidth) {
-
-			margin: 26px 0;
-
-		}
-
-		@media ($smWidth) {
-
-			display: block;
-
-		}
-
-	}
-
 	&__links {
 
 		display: flex;
-		flex-wrap: wrap;
-		margin-left: -12px;
+		margin: -6px;
+
+		@media ($smWidth) {
+
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+
+			&-url {
+
+				order: 1;
+
+			}
+
+			&-btn {
+
+				order: 2;
+
+			}
+
+		}
 
 		li {
 
-			margin-left: 12px;
-
-			@media ($smWidth) {
-
-				margin-bottom: 12px;
-
-			}
+			margin: 6px;
 
 		}
 
@@ -241,7 +139,7 @@
 			border: 1px solid var(--color);
 			border-radius: 24px;
 			white-space: nowrap;
-			padding: 0 12px;
+			padding: 0 11px;
 			color: var(--color);
 
 			&.is-open {
@@ -275,26 +173,15 @@
 
 	&__social {
 
-		.social__item {
+		@media ($mdWidth) {
 
-			margin: 0 0 0 22px;
-
-			@media ($smWidth) {
-
-				margin: 12px 22px 0 0;
-
-			}
+			margin: 20px -12px;
 
 		}
 
-		.social__link {
+		@media ($smWidth) {
 
-			@media ($smWidth) {
-
-				width: 16px;
-				height: 16px;
-
-			}
+			display: none;
 
 		}
 

@@ -275,19 +275,18 @@
 	&--border {
 
 		height: 68px !important;
-		background-color: #ECEAED;
+		background-color: #fff;
 		border: 1px solid #C9C4CB;
 		border-radius: 8px;
 		font-size: 16px;
 		line-height: 20px;
 		padding: 24px !important;
 
-		& + svg {
+		& ~ svg {
 
 			position: absolute;
 			top: 22px;
 			right: 22px;
-			fill: #fff;
 			opacity: 0;
 			pointer-events: none;
 
@@ -336,7 +335,7 @@
 			border-color: var(--error);
 			background-color: #fff;
 
-			& + svg {
+			& ~ .ico-invalid {
 
 				fill: var(--error);
 				opacity: 1;
@@ -356,7 +355,7 @@
 			border-color: var(--color) !important;
 			background-color: #fff;
 
-			& + svg {
+			& ~ .ico-valid {
 
 				fill: var(--color);
 				opacity: 1;
