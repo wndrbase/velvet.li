@@ -4,6 +4,21 @@
 
 {% set urlMain = '' %}
 
+{% set preloadImage = [
+	{
+		media: "(max-width: 767px)",
+		img : "/img/first-screen/phone--mobile.svg"
+	},
+	{
+		media: "(min-width: 768px) and (max-width: 1199px)",
+		img : "/img/first-screen/phone--tablet.svg"
+	},
+	{
+		media: "(min-width: 1200px)",
+		img : "/img/first-screen/phone.svg"
+	}
+] %}
+
 {% extends "template/base.html" %}
 
 {% block content %}
