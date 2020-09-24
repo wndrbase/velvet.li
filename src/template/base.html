@@ -39,15 +39,6 @@
 	<meta property="og:image:height" content="236">
 {% endif %}
 
-{% if ogType != 'article' %}
-
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:description" content="{{ description }}">
-	<meta name="twitter:title" content="{{ title }}">
-	<meta name="twitter:image" content="{{ url }}/{{ ogImage236 | default('og-236.png') }}">
-
-{% endif %}
-
 	<link href="/css/styles.css" rel="stylesheet">
 
 {% for item in preloadImage %}
