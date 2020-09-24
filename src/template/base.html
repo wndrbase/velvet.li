@@ -9,9 +9,6 @@
 	<link href="/css/styles.css" rel="preload" as="style">
 	<link href="/js/scripts.js" rel="preload" as="script">
 	<link href="/js/swiper.min.js" rel="preload" as="script">
-	<link href="/fonts/poppins-v13-latin-ext_latin-regular.woff2" rel="preload" as="font">
-	<link href="/fonts/poppins-v13-latin-ext_latin-500.woff2" rel="preload" as="font">
-	<link href="/fonts/poppins-v13-latin-ext_latin-700.woff2" rel="preload" as="font">
 
 	<link href="{{ url }}/favicon.png" rel="apple-touch-icon-precomposed">
 
@@ -22,7 +19,7 @@
 
 	<meta property="og:locale" content="en_EN">
 	<meta property="og:site_name" content="{{ site }}">
-	<meta property="og:url" content="{{ url }}/{% if urlPage %}{{ urlPage }}/{% endif %}">
+	<meta property="og:url" content="{{ url }}{% if urlPage %}/{{ urlPage }}/{% endif %}">
 	<meta property="og:type" content="{{ ogType | default('website') }}">
 	<meta property="og:title" content="{{ title }}">
 	<meta property="og:description" content="{{ description }}">
