@@ -60,7 +60,7 @@ gulp.task('html', function() {
 		.pipe(debug({title: 'html:'}))
 		.pipe(nunjucksRender({
 			data: {
-				url: 'http://' + domain,
+				url: 'https://www.velvet.li',
 				site: site
 			},
 			path: 'src/'
@@ -78,6 +78,8 @@ gulp.task('html', function() {
 			}
 		}))
 		.pipe(w3cjs.reporter())
+		.pipe(replace('css/styles.css', 'css/styles.min.css?' + Date.now()))
+		.pipe(replace('js/scripts.js', 'js/scripts.min.js?' + Date.now()))
 		.pipe(gulp.dest('build'))
 
 });
