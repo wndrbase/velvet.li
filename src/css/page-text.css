@@ -197,20 +197,6 @@
 
 		}
 
-		.numeric {
-
-			min-width: 60px;
-			display: inline-block;
-			vertical-align: baseline;
-
-			&--360 {
-
-				min-width: 360px;
-
-			}
-
-		}
-
 		.table-numeric {
 
 			width: 100%;
@@ -220,12 +206,36 @@
 
 				width: 300px;
 
+				@media ($smWidth) {
+
+					width: auto;
+
+				}
+
+				@media ($xsWidth) {
+
+					padding-right: 0 !important;
+
+				}
+
 			}
 
 			&__level-1 {
 
 				width: 60px;
 				font-weight: 700 !important;
+
+				@media ($smWidth) {
+
+					width: auto;
+
+				}
+
+				@media ($xsWidth) {
+
+					padding-right: 8px !important;
+
+				}
 
 			}
 
