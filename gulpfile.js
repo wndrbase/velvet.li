@@ -37,7 +37,7 @@ const w3cjs            = require('gulp-w3cjs');
 
 let config             = null;
 
-const site             = 'VELVET';
+const site             = 'Velvet Platform';
 const domain           = 'velvet.wndrbase.com';
 
 try {
@@ -60,7 +60,7 @@ gulp.task('html', function() {
 		.pipe(debug({title: 'html:'}))
 		.pipe(nunjucksRender({
 			data: {
-				url: 'https://www.velvet.li',
+				url: 'https://VelvetPlatform.com',
 				site: site
 			},
 			path: 'src/'
