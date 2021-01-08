@@ -200,7 +200,6 @@
 
 			const script = document.createElement('script');
 
-			script.type = 'text/javascript';
 			script.async = true;
 			script.src = '/js/swiper.min.js';
 

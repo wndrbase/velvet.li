@@ -34,6 +34,20 @@
 
 	};
 
+	const getQueryString = formData => {
+
+		let pairs = [];
+
+		for (let [key, value] of formData.entries()) {
+
+			pairs.push(encodeURIComponent(key) + '=' + encodeURIComponent(value));
+
+		}
+
+		return pairs.join('&');
+
+	}
+
 	Array.from(forms, form => {
 
 		form.addEventListener('submit', event => {
@@ -44,6 +58,7 @@
 
 			url = url.replace("/post?u=", "/post-json?u=");
 			url = url + '&c=VELVET.readySubscribe';
+			url = url + '&' + getQueryString(new FormData(form));
 
 			form.classList.add('is-send');
 			form.querySelector('.form-subscribe__submit').disabled = true;

@@ -1,4 +1,4 @@
-((rows) => {
+( rows => {
 
 	if(rows.length) {
 
@@ -20,15 +20,9 @@
 				threshold: [0.01]
 			};
 
-			const callback = (entries, observer) => {
-
-				Array.prototype.forEach.call(entries, (entry) => {
-
-					box.classList.toggle('in-viewport', entry.isIntersecting);
-
-				});
-
-			};
+			const callback = (entries, observer) =>
+				Array.from(entries, entry =>
+					box.classList.toggle('in-viewport', entry.isIntersecting));
 
 			const observer = new IntersectionObserver(callback, options);
 
