@@ -16,7 +16,7 @@
 
 		form.classList.remove('is-send');
 
-		form.querySelector('.form-subscribe__result').textContent = data.msg;
+		form.querySelector('.form-subscribe__result').innerHTML = data.msg;
 
 		form.classList.add('is-done');
 
