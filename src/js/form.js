@@ -1,6 +1,5 @@
-((forms) => {
-
-	"use strict";
+/*
+( forms => {
 
 	if(!forms.length) {
 
@@ -65,7 +64,6 @@
 
 			const script = document.createElement('script');
 
-			script.type = 'text/javascript';
 			script.async = true;
 			script.src = url
 
@@ -76,3 +74,4 @@
 	});
 
 })(document.querySelectorAll('.form-subscribe'));
+*/

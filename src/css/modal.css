@@ -82,35 +82,3 @@
 	}
 
 }
-
-.modal-form {
-
-	&__text {
-
-		margin-bottom: 24px;
-
-	}
-
-	&__input {
-
-		margin: 24px 0;
-		position: relative;
-
-	}
-
-	&__btn {
-
-		margin-top: 24px;
-		width: 100%;
-		background-color: #7b4865;
-
-	}
-
-	&:invalid &__btn {
-
-		opacity: 0.3;
-		pointer-events: none;
-
-	}
-
-}
