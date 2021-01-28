@@ -1,28 +1,30 @@
 {% set title = site %}
 
-{% set description = "" %}
+{% set description = "We help to collect money for" %}
 
-{% set urlMain = url + '/main' %}
+{% set urlMain = '' %}
+
+{% set preloadImage = [
+	{
+		media: "(max-width: 767px)",
+		img : "/img/first-screen/youtube/img--mobile@2x.webp"
+	},
+	{
+		media: "(min-width: 768px) and (max-width: 1199px)",
+		img : "/img/first-screen/youtube/img--tablet@2x.webp"
+	},
+	{
+		media: "(min-width: 1200px)",
+		img : "/img/first-screen/youtube/img.webp"
+	}
+] %}
 
 {% extends "template/base.html" %}
 
 {% block content %}
 
-	<div style="padding: 80px 40px">
-
-		<h1 class="h1">Pages</h1>
-
-		<ul class="h2">
-			<li><a href="/main">main</a></li>
-			<li><a href="/terms-of-use">Terms of Use</a></li>
-			<li><a href="/cookies-policy">Cookie policy</a></li>
-			<li><a href="/privacy-policy">Privacy Policy</a></li>
-			<li><a href="/terms-and-conditions">Terms and conditions</a></li>
-		</ul>
-
-		<hr style="margin: 20px">
-
-
-	</div>
+{% include "main/first-screen.html" %}
+{% include "main/percents.html" %}
+{% include "main/process.html" %}
 
 {% endblock %}
