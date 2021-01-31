@@ -39,20 +39,19 @@
 .btn,
 .hs-button {
 
-	padding: 0 60px;
-	height: 100px;
-	font-size: 24px;
-	line-height: 100px;
+	padding: 0 36px;
+	height: 96px;
+	font-size: 20px;
+	line-height: 96px;
 	font-weight: 500;
-	color: #fff;
-	border-radius: 16px;
-	background-color: var(--color);
+	color: var(--HoverCoral);
+	border-radius: 12px;
+	background-color: var(--MainPurple);
 
 	@media ($desktop) {
 
 		&:hover {
 
-			background-color: var(--color);
 
 		}
 
@@ -60,29 +59,23 @@
 
 	@media ($smWidth) {
 
-		font-size: 20px;
-		height: 96px;
-		line-height: 96px;
-		padding: 0 48px;
 
 	}
 
-	&--middle {
+	&--arrow {
 
-		padding: 0 36px;
-		height: 68px;
-		font-size: 16px;
-		line-height: 68px;
-		border-radius: 8px;
+		padding-right: 116px;
 
-	}
+		svg {
 
-	&--medium {
+			position: absolute;
+			top: 0;
+			right: 36px;
+			bottom: 0;
+			margin: auto;
+			fill: var(--HoverCoral);
 
-		padding: 0 24px;
-		height: 72px;
-		font-size: 16px;
-		line-height: 72px;
+		}
 
 	}
 
@@ -96,90 +89,8 @@
 
 		@media ($smWidth) {
 
-			font-size: 16px;
-			height: 36px;
-			line-height: 36px;
-			padding: 0 20px;
 
 		}
-
-	}
-
-	&--white {
-
-		color: var(--color);
-		background-color: #fff;
-
-		@media ($desktop) {
-
-			&:hover {
-
-				background-color: #fff;
-
-			}
-
-		}
-
-	}
-
-	&--tab {
-
-		padding: 0 !important;
-		height: 24px;
-		font-size: 20px;
-		line-height: 24px;
-		border-radius: 0;
-		color: color(var(--color) a(50%));
-		background-color: transparent !important;
-
-		@media ($smWidth) {
-
-			font-size: 16px;
-			height: 22px;
-			line-height: 22px;
-
-		}
-
-		&::after {
-
-			position: absolute;
-			width: 100%;
-			height: 2px;
-			left: 0;
-			bottom: -8px;
-			content: '';
-			opacity: 0;
-			background-color: var(--color);
-			transition: var(--transitionDefault);
-
-		}
-
-		&.is-active {
-
-			color: var(--color);
-
-			&::after {
-
-				opacity: 1;
-
-			}
-
-		}
-
-		@media ($desktop) {
-
-			&:hover {
-
-				&::after {
-
-					opacity: .5;
-
-				}
-
-			}
-
-		}
-
 
 	}
 

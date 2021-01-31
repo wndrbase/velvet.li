@@ -3,7 +3,6 @@
 const gulp             = require('gulp');
 const babel            = require('gulp-babel');
 const postcss          = require('gulp-postcss');
-const autoprefixer     = require("autoprefixer");
 const csso             = require("gulp-csso");
 const minify           = require('gulp-minify');
 const browserReporter  = require('postcss-browser-reporter');
@@ -78,8 +77,6 @@ gulp.task('html', function() {
 			}
 		}))
 		.pipe(w3cjs.reporter())
-		.pipe(replace('css/styles.css', 'css/styles.min.css?' + Date.now()))
-		.pipe(replace('js/scripts.js', 'js/scripts.min.js?' + Date.now()))
 		.pipe(gulp.dest('build'))
 
 });
@@ -104,24 +101,18 @@ gulp.task('css', function () {
 			.pipe(sourcemaps.write())
 			.pipe(rename('styles.css'))
 			.pipe(gulp.dest('build/css'))
-			.pipe(postcss([
-				autoprefixer({
-					browsers: 'Android >= 4.4'
-				})
-			]))
 			.pipe(csso())
 			.pipe(rename({suffix: ".min"}))
-//			.pipe(gulp.dest('src/css'))
 			.pipe(gulp.dest('build/css'))
 
 });
 
-gulp.task('babel', function() {
+gulp.task('js', function() {
 
-	return gulp.src(['src/js/js.js','src/js/*.js','!src/js/*.min.js'])
+	return gulp.src(['src/js/*.min.js','src/js/*',])
 		.pipe(debug({title: 'babel'}))
 		.pipe(sourcemaps.init())
-		.pipe(concat('_js.js'))
+		.pipe(concat('scripts.js'))
 		.pipe(sourcemaps.write())
 		.pipe(babel({
 			presets: ['@babel/env']
@@ -136,45 +127,13 @@ gulp.task('babel', function() {
 
 });
 
-gulp.task('min', function() {
-
-	return gulp.src(['src/js/min/*.js','!src/js/min/swiper.min.js'])
-		.pipe(debug({title: 'min'}))
-		.pipe(gulpif(
-			function(file){
-				return !(/min$/.test(file.stem));
-			},
-			minify({
-				noSource: true
-			})
-		))
-		.pipe(concat('_min.js'))
-		.pipe(gulp.dest('build/js'))
-
-});
-
-gulp.task('concat', function() {
-
-	gulp.src(['build/js/_min.js','build/js/_js.js'])
-		.pipe(concat('scripts.js'))
-		.pipe(gulp.dest('build/js'));
-
-	return gulp.src(['build/js/_min.js','build/js/_js.min.js'])
-		.pipe(concat('scripts.min.js'))
-//		.pipe(gulp.dest('src/js'))
-		.pipe(gulp.dest('build/js'))
-
-});
-
-gulp.task('js', gulp.series('babel','min','concat'));
-
 gulp.task('serve', function() {
 
 	server.init({
 		server: 'build',
 		files: [
 			{
-				match: ['build/**/*.*', '!build/**/*.min.{css,js}'],
+				match: ['build/**/*', '!build/**/*.min.{css,js}'],
 				fn: function (event, file) {
 					this.reload()
 				}
@@ -188,16 +147,6 @@ gulp.task('serve', function() {
 gulp.task('clear', function() {
 
 	return del('build');
-
-});
-
-gulp.task('copy-js', function() {
-
-// big scripts
-	return gulp.src([
-		'src/js/min/swiper.min.js',
-		])
-		.pipe(gulp.dest('build/js'));
 
 });
 
@@ -233,8 +182,8 @@ gulp.task('ftp', function () {
 });
 
 gulp.task('watch', function() {
-	gulp.watch(['src/js/*.*','!src/js/scripts.min.js'], gulp.series('js'));
-	gulp.watch(['src/css/*.*','!src/css/styles.min.css'], gulp.series('css'));
+	gulp.watch('src/js/*.*', gulp.series('js'));
+	gulp.watch('src/css/*.*', gulp.series('css'));
 	gulp.watch('src/**/index.html', gulp.series('html'));
 	gulp.watch(['src/**/*.html','!src/**/index.html'], gulp.series('html-touch'));
 	gulp.watch(['src/**/*.*', '!src/**/*.{css,html,js}'], gulp.series('copy'));
@@ -243,7 +192,6 @@ gulp.task('watch', function() {
 
 gulp.task('default', gulp.series(
 	'clear',
-	'copy-js',
 	gulp.parallel('css','js'),
 	'html',
 	'copy',

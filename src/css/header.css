@@ -1,12 +1,10 @@
 .header {
 
 	position: relative;
-	padding: 38px 0;
+	padding: 24px 0;
 	z-index: 1;
 
 	@media ($smWidth) {
-
-		padding: 20px 0;
 
 	}
 
@@ -23,9 +21,9 @@
 		@media ($smWidth) {
 
 			img {
-
+/*
 				width: 96px;
-				height: 30px;
+				height: 30px; */
 
 			}
 
@@ -33,28 +31,8 @@
 
 	}
 
-	&__social {
-
-		width: 296px;
-
-		@media ($mdWidth) {
-
-			margin-left: auto;
-			width: 192px;
-
-		}
-
-		@media ($smWidth) {
-
-			width: auto;
-			margin-right: 20px;
-
-		}
-
-	}
-
 	&__btns {
-
+/*
 		display: flex;
 
 		.btn {
@@ -92,7 +70,7 @@
 			}
 
 		}
-
+ */
 	}
 
 }
