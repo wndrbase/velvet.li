@@ -2,12 +2,12 @@
 
 	position: relative;
 	overflow: hidden;
-	margin: 96px 0 0;
+	margin: 48px 0 0;
 
 	&__wrap {
 
 		display: flex;
-		align-items: flex-start;
+		align-items: flex-end;
 		justify-content: space-between;
 
 	}
@@ -16,6 +16,7 @@
 
 		width: 500px;
 		flex-shrink: 0;
+		padding-top: 48px;
 
 	}
 
