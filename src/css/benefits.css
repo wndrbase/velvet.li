@@ -1,0 +1,41 @@
+.benefits {
+
+	margin: 180px 0;
+
+	&__title {
+
+		margin-bottom: 168px;
+		max-width: 500px;
+
+	}
+
+	&__list {
+
+		display: flex;
+		justify-content: space-between;
+
+		li {
+
+			width: 320px;
+
+			.h2 {
+
+				display: block;
+				margin-bottom: 12px;
+
+			}
+
+			p {
+
+				font-weight: 300;
+				font-size: 16px;
+				line-height: 28px;
+				color: color(var(--DarkPurple) a(70%));
+
+			}
+
+		}
+
+	}
+
+}
