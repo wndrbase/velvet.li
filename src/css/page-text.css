@@ -277,33 +277,3 @@
 	}
 
 }
-
-.scroll-up {
-
-	position: fixed;
-	width: 80px;
-	height: 80px;
-	background-color: #3F2D44;
-	border-radius: 50%;
-	right: 20px;
-	top: 33%;
-	z-index: 8;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	svg {
-
-		fill: #fff;
-		stroke: #fff;
-
-	}
-
-	@media ($smWidth) {
-
-		width: 40px;
-		height: 40px;
-
-	}
-
-}
