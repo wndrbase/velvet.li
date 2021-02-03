@@ -20,6 +20,8 @@
 		window.scrollTo(0,windowScroll);
 		activeModal = false;
 
+		setTimeout( () => document.documentElement.classList.remove('scroll-behavior-off'));
+
 	});
 
 	const modalShow = selector => {
@@ -34,12 +36,20 @@
 
 		Array.from(items, el => el.classList.toggle('visuallyhidden', el !== activeModal));
 
-		wrapper.style.top = -windowScroll + 'px';
-		document.body.classList.add('modal-show');
-		window.scrollTo(0,0);
+		document.documentElement.classList.add('scroll-behavior-off');
 
-		activeModal.focus();
+		setTimeout( () => {
 
+			wrapper.style.top = -windowScroll + 'px';
+
+			modal.classList.remove('visuallyhidden');
+
+			document.body.classList.add('modal-show');
+			window.scrollTo(0,0);
+
+			activeModal.focus();
+
+		});
 	};
 
 	modal.addEventListener('click', event => {
