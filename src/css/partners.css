@@ -1,0 +1,59 @@
+.partners {
+
+	margin-top: 96px;
+
+	& + .request {
+
+		margin-top: 120px;
+
+	}
+
+	&__title {
+
+		margin-bottom: 60px;
+
+	}
+
+	&__list {
+
+		border: 1px solid #ECEBED;
+		border-radius: 24px;
+		display: flex;
+
+	}
+
+	&__item {
+
+		width: calc(100% / 3);
+		padding: 48px;
+		text-align: center;
+
+		& + & {
+
+			border-left: 1px solid #ECEBED;
+
+		}
+
+		p {
+
+			margin: 12px 0;
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 28px;
+			color: var(--DarkPurple);
+
+		}
+
+	}
+
+	&__logo {
+
+		height: 84px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 24px;
+
+	}
+
+}
