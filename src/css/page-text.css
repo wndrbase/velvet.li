@@ -96,7 +96,7 @@
 		p {
 
 			margin: 25px 0;
-			color: var(--text);
+			color: var(--color);
 
 		}
 
@@ -108,7 +108,7 @@
 
 				margin: 25px 0;
 				padding-left: 20px;
-				color: var(--text);
+				color: var(--color);
 
 				&::before {
 
@@ -191,7 +191,7 @@
 
 				width: 4px;
 				height: 4px;
-				background-color: var(--text);
+				background-color: var(--color);
 
 			}
 
@@ -268,7 +268,7 @@
 
 			td {
 
-				color: var(--text);
+				color: var(--color);
 
 			}
 

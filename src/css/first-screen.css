@@ -1,19 +1,8 @@
 .first-screen {
 
 	position: relative;
-	margin: 56px 0 150px;
-
-	@media ($mdWidth) {
-
-		margin: 100px 0;
-
-	}
-
-	@media ($smWidth) {
-
-		margin: 16px 0;
-
-	}
+	overflow: hidden;
+	margin: 96px 0 0;
 
 	&__wrap {
 
@@ -21,255 +10,38 @@
 		align-items: flex-start;
 		justify-content: space-between;
 
-		@media ($mdWidth) {
-
-			display: block;
-
-		}
-
 	}
 
 	&__content {
 
-		max-width: 720px;
+		width: 500px;
+		flex-shrink: 0;
 
 	}
 
-	&__title {
+	&__before {
 
-		font-weight: bold;
-		font-size: 60px;
-		line-height: 72px;
-		margin: 44px 0 24px;
-
-		@media ($smWidth) {
-
-			font-size: 48px;
-			line-height: 58px;
-			margin: 16px 0 11px;
-
-		}
-
-		svg {
-
-			display: inline;
-			margin-left: 5px;
-
-		}
+		margin-bottom: 24px;
 
 	}
 
-	&__tabs {
+	&__text {
 
-		display: flex;
-		margin: 24px -12px 60px;
-
-		@media ($smWidth) {
-
-			margin: 0 -12px;
-			overflow-x: auto;
-
-		}
-
-		@media ($xsWidth) {
-
-			margin: 0 -10px;
-
-		}
-
-		.btn {
-
-			margin: 12px;
-
-		}
-
-	}
-
-	&__btn {
-
-		margin: 36px 0;
-
-		@media ($smWidth) {
-
-			margin: 38px 0 23px;
-
-		}
-
-		.btn {
-
-			background-color: #7b4865;
-
-			@media ($smWidth) {
-
-				width: 100%;
-				max-width: 400px;
-
-			}
-
-		}
-
-		svg {
-
-			position: absolute;
-			top: -51px;
-			right: -155px;
-
-			@media ($mdWidth) {
-
-				top: -46px;
-				right: -166px;
-
-			}
-
-			@media ($smWidth) {
-
-				display: none;
-
-			}
-
-		}
-
-	}
-
-	&__note {
-
-		color: var(--text);
-		font-size: 16px;
-		line-height: 24px;
-
-		@media ($smWidth) {
-
-			font-size: 14px;
-			line-height: 17px;
-
-		}
-
-		a {
-
-			text-decoration: underline;
-			color: #3F2D44;
-			white-space: nowrap;
-			transition: var(--transitionDefault);
-
-			@media ($desktop) {
-
-				&:hover {
-
-					text-decoration-color: transparent;
-
-				}
-
-			}
-
-		}
+		margin-bottom: 72px;
 
 	}
 
 	&__img {
 
+		width: 566px;
+		height: 511px;
 		position: relative;
-		width: 400px;
-		height: 480px;
 
-		@media ($mdWidth) {
+		&-bg {
 
-			width: 696px;
-			max-width: 100%;
-			margin: 120px auto;
-
-		}
-
-		@media ($smWidth) {
-
-			margin: 90px 0 60px;
-			height: 240px;
-
-		}
-
-		&-tab {
-
-			opacity: 0;
 			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			border-radius: 36px;
-			transition: var(--transitionDefault);
-			transform: scaleY(1.2);
-
-			&.is-active {
-
-				opacity: 1;
-				z-index: 1;
-				transform: scaleY(1.0);
-
-			}
-
-		}
-
-	}
-
-	&__youtube {
-
-		background-color: color(#B8893E a(20%));
-
-	}
-
-	&__exchange {
-
-		background-color: color(#959F68 a(20%));
-
-	}
-
-	&__startup {
-
-		background-color: color(#EB4504 a(20%));
-
-	}
-
-	&__podcast {
-
-		background-color: color(#AB6E4D a(20%));
-
-	}
-
-	&__event {
-
-		background-color: color(#3F2D44 a(20%));
-
-	}
-
-	&__bg {
-
-		position: absolute;
-		left: -213px;
-		top: -30px;
-		pointer-events: none;
-
-		@media ($mdWidth) {
-
-			left: -128px;
-			right: 0;
-			top: -180px;
-			margin: auto;
-			width: 839px;
-			height: 762px;
-
-		}
-
-		@media ($smWidth) {
-
-			width: 467px;
-			height: 424px;
-			top: -76px;
-			left: -134px;
-
-		}
-
-		@media ($xsWidth) {
-
-			left: -164px;
+			left: 44px;
+			bottom: -20px;
 
 		}
 
@@ -278,60 +50,24 @@
 	&__picture {
 
 		position: absolute;
-		left: -27px;
+		left: 0;
+		right: 0;
 		bottom: 0;
-
-		@media ($mdWidth) {
-
-			left: -24px;
-			right: 0;
-			margin: auto;
-
-		}
+		margin: auto;
+		content: '';
 
 	}
 
-	&__data-words {
+	&__foot {
 
-		color: transparent;
-		position: relative;
-		overflow: hidden;
-		display: inline-block;
-		vertical-align: bottom;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 28px;
+		text-align: center;
+		margin: 80px auto;
+		width: 720px;
+		max-width: 100%;
 
-		span {
-
-			position: absolute;
-			top: 0;
-			left: 0;
-			color: color(var(--color) a(50%));
-			animation: dataWordOdd 5s infinite;
-
-		}
-
-	}
-
-}
-
-@keyframes dataWordOdd {
-
-	0% {
-		transform: translateY(0);
-	}
-	20% {
-		transform: translateY(calc(-100% / 6));
-	}
-	40% {
-		transform: translateY(calc((-100% / 6 * 2)));
-	}
-	60% {
-		transform: translateY(calc((-100% / 6 * 3)));
-	}
-	80% {
-		transform: translateY(calc((-100% / 6 * 4)));
-	}
-	100% {
-		transform: translateY(calc((-100% / 6 * 5)));
 	}
 
 }
