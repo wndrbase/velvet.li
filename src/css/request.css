@@ -1,0 +1,70 @@
+.request {
+
+	margin: 180px 0;
+
+	&__box {
+
+		display: flex;
+		justify-content: space-between;
+
+	}
+
+	&__content {
+
+		width: 500px;
+
+	}
+
+	&__title {
+
+		display: flex;
+		flex-wrap: wrap;
+
+		&-item {
+
+			white-space: nowrap;
+			position: relative;
+
+			&--bg-left {
+
+				margin-left: 5px;
+				padding-left: 7px;
+				background-image: linear-gradient(to right, color(var(--HoverCoral) a(50%)), rgba(255, 255, 255, 0));
+				border-radius: 8px;
+
+			}
+
+			&--bg-right {
+
+				padding-right: 12px;
+				background-image: linear-gradient(to left, color(var(--HoverCoral) a(50%)), rgba(255, 255, 255, 0));
+				border-radius: 8px;
+
+			}
+
+		}
+
+	}
+
+	&__form {
+
+		width: 400px;
+		margin-right: 68px;
+
+		.input + .input {
+
+			margin-top: 12px;
+
+		}
+
+		.btn {
+
+			margin-top: 24px;
+			width: 100%;
+			text-align: left;
+
+		}
+
+	}
+
+}
