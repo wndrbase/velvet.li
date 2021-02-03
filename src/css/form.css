@@ -28,7 +28,7 @@
 
 	}
 
-	&[disabled] {
+	&:disabled {
 
 		pointer-events: none;
 
@@ -74,6 +74,7 @@
 			bottom: 0;
 			margin: auto;
 			fill: var(--HoverCoral);
+			stroke: var(--HoverCoral);
 
 		}
 
@@ -81,7 +82,7 @@
 
 	&--small {
 
-		padding: 0 24px;
+		padding: 0 20px;
 		height: 48px;
 		font-size: 16px;
 		line-height: 48px;
@@ -235,7 +236,7 @@
 
 	font-size: 14px;
 	line-height: 20px;
-	color: var(--text);
+	color: var(--color);
 
 	.hs-form-required {
 

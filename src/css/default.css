@@ -89,6 +89,30 @@ svg {
 
 }
 
+.h0 {
+
+	font-weight: 600;
+	font-size: 60px;
+	line-height: 72px;
+
+}
+
+.h1 {
+
+	font-weight: 600;
+	font-size: 48px;
+	line-height: 60px;
+
+}
+
+.h2 {
+
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 30px;
+
+}
+
 .fade-in {
 
 	opacity: 0.01;
