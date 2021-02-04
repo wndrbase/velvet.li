@@ -59,12 +59,17 @@
 
 	@media ($smWidth) {
 
+		padding: 0 30px;
+		height: 72px;
+		font-size: 16px;
+		line-height: 72px;
 
 	}
 
 	&--arrow {
 
 		padding-right: 116px;
+		text-align: left;
 
 		svg {
 
@@ -90,6 +95,10 @@
 
 		@media ($smWidth) {
 
+			padding: 0 20px;
+			height: 48px;
+			font-size: 14px;
+			line-height: 48px;
 
 		}
 
@@ -152,6 +161,14 @@ input.input,
 
 	}
 
+	@media ($smWidth) {
+
+		height: 60px;
+		line-height: 20px;
+		padding: 20px;
+
+	}
+
 }
 
 .hs-form-field {
@@ -203,7 +220,7 @@ input.input,
 
 	font-size: 14px;
 	line-height: 20px;
-	color: var(--color);
+	color: var(--SecondaryPurple);
 	margin: 24px 0;
 
 	.hs-form-required {
@@ -255,7 +272,7 @@ input.input,
 			a {
 
 				text-decoration: underline;
-				color: inherit;
+				color: var(--color);
 
 				@media ($desktop) {
 

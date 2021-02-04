@@ -4,11 +4,23 @@
 	overflow: hidden;
 	margin: 48px 0 0;
 
+	@media ($smWidth) {
+
+		margin: 40px 0 32px;
+
+	}
+
 	&__wrap {
 
 		display: flex;
 		align-items: flex-end;
 		justify-content: space-between;
+
+		@media ($smWidth) {
+
+			display: block;
+
+		}
 
 	}
 
@@ -18,17 +30,42 @@
 		flex-shrink: 0;
 		padding-top: 48px;
 
+		@media ($smWidth) {
+
+			padding: 0;
+			width: 100%;
+
+			.btn {
+
+				width: 100%;
+
+			}
+
+		}
+
 	}
 
 	&__before {
 
 		margin-bottom: 24px;
 
+		@media ($smWidth) {
+
+			margin-bottom: 12px;
+
+		}
+
 	}
 
 	&__text {
 
 		margin-bottom: 72px;
+
+		@media ($smWidth) {
+
+			margin-bottom: 36px;
+
+		}
 
 	}
 
@@ -38,11 +75,26 @@
 		height: 511px;
 		position: relative;
 
+		@media ($smWidth) {
+
+			width: 320px;
+			height: 288px;
+			margin: 38px auto;
+
+		}
+
 		&-bg {
 
 			position: absolute;
 			left: 44px;
 			bottom: -20px;
+
+			@media ($smWidth) {
+
+				left: 0;
+				bottom: -11px;
+
+			}
 
 		}
 
@@ -55,7 +107,16 @@
 		right: 0;
 		bottom: 0;
 		margin: auto;
-		content: '';
+
+		@media ($smWidth) {
+
+			width: 206px;
+			height: 257px;
+			object-fit: contain;
+			object-position: bottom;
+			right: 62px;
+
+		}
 
 	}
 
@@ -68,6 +129,12 @@
 		margin: 80px auto;
 		width: 720px;
 		max-width: 100%;
+
+		@media ($smWidth) {
+
+			display: none;
+
+		}
 
 	}
 

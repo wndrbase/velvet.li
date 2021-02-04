@@ -2,9 +2,10 @@
 
 	position: relative;
 	padding: 24px 0;
-	z-index: 1;
 
 	@media ($smWidth) {
+
+		padding: 20px 0;
 
 	}
 
@@ -21,9 +22,9 @@
 		@media ($smWidth) {
 
 			img {
-/*
-				width: 96px;
-				height: 30px; */
+
+				width: 90px;
+				height: 30px;
 
 			}
 
@@ -32,45 +33,17 @@
 	}
 
 	&__btns {
-/*
-		display: flex;
 
-		.btn {
+		@media ($xsWidth) {
 
-			margin-left: 12px;
-
-			svg {
+			.btn {
 
 				display: none;
-				fill: #fff;
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				margin: auto;
-
-			}
-
-			@media ($smWidth) {
-
-				width: 30px;
-				height: 30px;
-				color: transparent;
-				padding: 0;
-				font-size: 0;
-				border-radius: 6px;
-
-				svg {
-
-					display: block;
-
-				}
 
 			}
 
 		}
- */
+
 	}
 
 }

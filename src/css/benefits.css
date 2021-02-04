@@ -2,10 +2,22 @@
 
 	margin: 180px 0;
 
+	@media ($smWidth) {
+
+		margin: 60px 0;
+
+	}
+
 	&__title {
 
 		margin-bottom: 168px;
 		max-width: 500px;
+
+		@media ($smWidth) {
+
+			margin-bottom: 96px;
+
+		}
 
 	}
 
@@ -14,9 +26,22 @@
 		display: flex;
 		justify-content: space-between;
 
+		@media ($smWidth) {
+
+			display: block;
+
+		}
+
 		li {
 
 			width: 320px;
+
+			@media ($smWidth) {
+
+				width: auto;
+				margin-top: 96px;
+
+			}
 
 			.h2 {
 

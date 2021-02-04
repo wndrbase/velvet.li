@@ -2,15 +2,33 @@
 
 	margin-top: 96px;
 
+	@media ($smWidth) {
+
+		margin-top: 40px;
+
+	}
+
 	& + .request {
 
 		margin-top: 120px;
+
+		@media ($smWidth) {
+
+			margin-top: 60px;
+
+		}
 
 	}
 
 	&__title {
 
 		margin-bottom: 60px;
+
+		@media ($smWidth) {
+
+			margin-bottom: 36px;
+
+		}
 
 	}
 
@@ -20,6 +38,12 @@
 		border-radius: 24px;
 		display: flex;
 
+		@media ($smWidth) {
+
+			display: block;
+
+		}
+
 	}
 
 	&__item {
@@ -28,9 +52,23 @@
 		padding: 48px;
 		text-align: center;
 
+		@media ($smWidth) {
+
+			width: 100%;
+			padding: 36px;
+
+		}
+
 		& + & {
 
 			border-left: 1px solid #ECEBED;
+
+			@media ($smWidth) {
+
+				border-left: 0;
+				border-top: 1px solid #ECEBED;
+
+			}
 
 		}
 
@@ -41,6 +79,12 @@
 			font-size: 16px;
 			line-height: 28px;
 			color: var(--DarkPurple);
+
+			@media ($smWidth) {
+
+				margin-bottom: 0;
+
+			}
 
 		}
 
@@ -53,6 +97,12 @@
 		justify-content: center;
 		align-items: center;
 		margin-bottom: 24px;
+
+		@media ($smWidth) {
+
+			height: auto;
+
+		}
 
 	}
 

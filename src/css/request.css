@@ -2,16 +2,34 @@
 
 	margin: 180px 0;
 
+	@media ($smWidth) {
+
+		margin: 60px 0;
+
+	}
+
 	&__box {
 
 		display: flex;
 		justify-content: space-between;
+
+		@media ($smWidth) {
+
+			display: block;
+
+		}
 
 	}
 
 	&__content {
 
 		width: 500px;
+
+		@media ($smWidth) {
+
+			width: auto;
+
+		}
 
 	}
 
@@ -32,6 +50,12 @@
 				background-image: linear-gradient(to right, color(var(--HoverCoral) a(50%)), rgba(255, 255, 255, 0));
 				border-radius: 8px;
 
+				@media ($smWidth) {
+
+					margin-left: 2px;
+
+				}
+
 			}
 
 			&--bg-right {
@@ -39,6 +63,12 @@
 				padding-right: 12px;
 				background-image: linear-gradient(to left, color(var(--HoverCoral) a(50%)), rgba(255, 255, 255, 0));
 				border-radius: 8px;
+
+				@media ($smWidth) {
+
+					padding-right: 8px;
+
+				}
 
 			}
 
@@ -51,6 +81,13 @@
 		width: 400px;
 		margin-right: 68px;
 
+		@media ($smWidth) {
+
+			width: auto;
+			margin: 36px 0;
+
+		}
+
 		.input + .input {
 
 			margin-top: 12px;
@@ -61,7 +98,6 @@
 
 			margin-top: 24px;
 			width: 100%;
-			text-align: left;
 
 		}
 

@@ -30,6 +30,12 @@
 	position: relative;
 	padding: 0 24px;
 
+	@media ($smWidth) {
+
+		padding: 0;
+
+	}
+
 }
 
 @media ($desktop) {
@@ -54,7 +60,6 @@
 	.center {
 
 		width: 768px;
-		padding: 0 36px;
 
 	}
 
