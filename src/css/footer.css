@@ -8,10 +8,6 @@
 
 	@media ($mdWidth) {
 
-	}
-
-	@media ($smWidth) {
-
 		padding: 60px 0;
 
 	}
@@ -35,7 +31,7 @@
 
 			width: 180px;
 
-			@media ($smWidth) {
+			@media ($mdWidth) {
 
 				width: 150px;
 
@@ -47,7 +43,7 @@
 
 			width: 180px;
 
-			@media ($smWidth) {
+			@media ($mdWidth) {
 
 				width: 150px;
 
@@ -59,6 +55,12 @@
 
 			margin-left: auto;
 			width: 540px;
+
+			@media ($mdWidth) {
+
+				width: 400px;
+
+			}
 
 			@media ($smWidth) {
 
@@ -164,7 +166,7 @@
 			margin-bottom: 12px;
 			padding-bottom: 12px;
 
-			@media ($smWidth) {
+			@media ($mdWidth) {
 
 				overflow-x: auto;
 

@@ -7,7 +7,7 @@
 		background-color: var(--DarkPurple);
 		border-radius: 24px;
 
-		@media ($smWidth) {
+		@media ($mdWidth) {
 
 			padding: 60px 0;
 			border-radius: 0;
@@ -21,7 +21,7 @@
 		width: 500px;
 		margin-bottom: 48px;
 
-		@media ($smWidth) {
+		@media ($mdWidth) {
 
 			width: auto;
 			margin-bottom: 12px;
@@ -47,7 +47,7 @@
 
 			@media ($smWidth) {
 
-				width: auto;
+				width: 100%;
 				font-size: 16px;
 				line-height: 24px;
 
@@ -67,7 +67,7 @@
 			margin-right: 16px;
 			flex-shrink: 0;
 
-			@media ($smWidth) {
+			@media ($mdWidth) {
 
 				width: 48px;
 				height: 48px;

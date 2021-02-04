@@ -7,7 +7,7 @@
 		background-color: var(--DarkPurple);
 		border-radius: 24px;
 
-		@media ($smWidth) {
+		@media ($mdWidth) {
 
 			padding: 60px 0 42px;
 			border-radius: 0;
@@ -23,7 +23,7 @@
 		align-items: flex-end;
 		margin-bottom: 96px;
 
-		@media ($smWidth) {
+		@media ($mdWidth) {
 
 			display: block;
 			margin-bottom: 48px;
@@ -36,7 +36,7 @@
 
 		width: 500px;
 
-		@media ($smWidth) {
+		@media ($mdWidth) {
 
 			width: auto;
 
@@ -52,7 +52,7 @@
 		color: var(--HoverCoral);
 		margin: 5px 0;
 
-		@media ($smWidth) {
+		@media ($mdWidth) {
 
 			width: auto;
 			font-size: 16px;
@@ -66,7 +66,7 @@
 
 		margin-bottom: 48px;
 
-		@media ($smWidth) {
+		@media ($mdWidth) {
 
 			margin-bottom: 24px;
 
@@ -88,10 +88,15 @@
 			font-size: 16px;
 			line-height: 28px;
 
+			@media ($mdWidth) {
+
+				margin-bottom: 24px;
+
+			}
+
 			@media ($smWidth) {
 
 				width: 100%;
-				margin-bottom: 24px;
 
 			}
 
@@ -108,7 +113,7 @@
 			background-color: var(--HoverCoral);
 			margin: 24px 0;
 
-			@media ($smWidth) {
+			@media ($mdWidth) {
 
 				width: 48px;
 				height: 48px;
