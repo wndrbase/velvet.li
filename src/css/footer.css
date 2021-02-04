@@ -4,7 +4,6 @@
 	color: #fff;
 	position: relative;
 	padding: 96px 0 104px;
-	outline:1px solid red;
 	background-color: var(--DarkPurple);
 
 	@media ($mdWidth) {

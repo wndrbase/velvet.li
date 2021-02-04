@@ -59,6 +59,12 @@
 
 		}
 
+		@media ($xsWidth) {
+
+			padding: 24px;
+
+		}
+
 		& + & {
 
 			border-left: 1px solid #ECEBED;
