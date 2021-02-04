@@ -3,8 +3,6 @@
 
 ((tab)=>{
 
-	"use strict";
-
 	if(!tab) {
 
 		return;
@@ -20,20 +18,8 @@
 
 			Array.from(btns, (_btn, index) => {
 
-				if(_btn.classList.contains('is-open')) {
-
-					_btn.classList.remove('is-open');
-					items[index].classList.remove('is-open');
-
-				}
-				else {
-
-					_btn.classList.toggle('is-open', _btn === btn);
-					items[index].classList.toggle('is-open', _btn === btn);
-
-					setTimeout( () => window.scrollTo({top: window.pageYOffset + window.innerHeight, behavior: 'smooth'}), 100);
-
-				}
+				_btn.classList.toggle('is-open', _btn === btn);
+				items[index].classList.toggle('is-open', _btn === btn);
 
 			});
 

@@ -1,7 +1,5 @@
 ((cookie) => {
 
-	"use strict";
-
 	if(cookie) {
 
 		if(Cookies.get('YourPrivacy') !== 'Accept') {

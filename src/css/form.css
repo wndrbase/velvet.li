@@ -39,20 +39,19 @@
 .btn,
 .hs-button {
 
-	padding: 0 60px;
-	height: 100px;
-	font-size: 24px;
-	line-height: 100px;
+	padding: 0 36px;
+	height: 96px;
+	font-size: 20px;
+	line-height: 96px;
 	font-weight: 500;
-	color: #fff;
-	border-radius: 16px;
-	background-color: var(--color);
+	color: var(--HoverCoral);
+	border-radius: 12px;
+	background-color: var(--MainPurple);
 
 	@media ($desktop) {
 
 		&:hover {
 
-			background-color: var(--color);
 
 		}
 
@@ -60,35 +59,35 @@
 
 	@media ($smWidth) {
 
-		font-size: 20px;
-		height: 96px;
-		line-height: 96px;
-		padding: 0 48px;
-
-	}
-
-	&--middle {
-
-		padding: 0 36px;
-		height: 68px;
-		font-size: 16px;
-		line-height: 68px;
-		border-radius: 8px;
-
-	}
-
-	&--medium {
-
-		padding: 0 24px;
+		padding: 0 30px;
 		height: 72px;
 		font-size: 16px;
 		line-height: 72px;
 
 	}
 
+	&--arrow {
+
+		padding-right: 116px;
+		text-align: left;
+
+		svg {
+
+			position: absolute;
+			top: 0;
+			right: 36px;
+			bottom: 0;
+			margin: auto;
+			fill: var(--HoverCoral);
+			stroke: var(--HoverCoral);
+
+		}
+
+	}
+
 	&--small {
 
-		padding: 0 24px;
+		padding: 0 20px;
 		height: 48px;
 		font-size: 16px;
 		line-height: 48px;
@@ -96,90 +95,12 @@
 
 		@media ($smWidth) {
 
-			font-size: 16px;
-			height: 36px;
-			line-height: 36px;
 			padding: 0 20px;
+			height: 48px;
+			font-size: 14px;
+			line-height: 48px;
 
 		}
-
-	}
-
-	&--white {
-
-		color: var(--color);
-		background-color: #fff;
-
-		@media ($desktop) {
-
-			&:hover {
-
-				background-color: #fff;
-
-			}
-
-		}
-
-	}
-
-	&--tab {
-
-		padding: 0 !important;
-		height: 24px;
-		font-size: 20px;
-		line-height: 24px;
-		border-radius: 0;
-		color: color(var(--color) a(50%));
-		background-color: transparent !important;
-
-		@media ($smWidth) {
-
-			font-size: 16px;
-			height: 22px;
-			line-height: 22px;
-
-		}
-
-		&::after {
-
-			position: absolute;
-			width: 100%;
-			height: 2px;
-			left: 0;
-			bottom: -8px;
-			content: '';
-			opacity: 0;
-			background-color: var(--color);
-			transition: var(--transitionDefault);
-
-		}
-
-		&.is-active {
-
-			color: var(--color);
-
-			&::after {
-
-				opacity: 1;
-
-			}
-
-		}
-
-		@media ($desktop) {
-
-			&:hover {
-
-				&::after {
-
-					opacity: .5;
-
-				}
-
-			}
-
-		}
-
 
 	}
 
@@ -187,12 +108,13 @@
 
 .hs-input {
 
-	height: 68px;
-	line-height: 20px;
+	height: 72px;
+	line-height: 24px;
 
 	padding: 24px;
 
 	font-size: 16px;
+	font-weight: 300;
 	color: var(--color);
 
 	width: 100%;
@@ -203,14 +125,21 @@
 	filter: none;
 	-webkit-transform: translateZ(0px); /* FIX for iOS safari https://forum.ionicframework.com/t/ion-input-shows-only-the-first-entered-character-on-ios/73107/5 */
 
-	border-radius: 8px;
+	border-radius: 12px;
 
-	border: 1px solid #C9C4CB;
+	border: 1px solid color(var(--border) a(15%));
 	background-color: #fff;
 
 	&::-ms-clear {
 
 		display: none;
+
+	}
+
+	&::placeholder {
+
+		color: var(--color);
+		opacity: .5;
 
 	}
 
@@ -231,33 +160,23 @@
 
 	}
 
-	&:disabled {
+	@media ($smWidth) {
 
-		pointer-events: none;
-
-	}
-
-	&:invalid {
-
-		box-shadow: none;
+		height: 60px;
+		line-height: 20px;
+		padding: 20px;
 
 	}
 
-	&:-webkit-autofill {
+	&:invalid:not(:placeholder-shown):not(:focus) {
 
-		animation-name: autofill;
-		animation-fill-mode: both;
+		border-color: var(--error);
 
 	}
 
-}
+	&:valid:not(:focus) {
 
-@keyframes autofill {
-
-	to {
-
-		color: var(--color);
-		background-color: #fff;
+		border-color: var(--color);
 
 	}
 
@@ -265,7 +184,7 @@
 
 .hs-form-field {
 
-	margin: 24px 0;
+	margin: 12px 0;
 
 	& > label {
 
@@ -293,38 +212,65 @@
 .hs_submit {
 
 	margin-top: 24px;
+	position: relative;
+
+	&::after {
+
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		top: 0;
+		right: 36px;
+		bottom: 0;
+		margin: auto;
+		pointer-events: none;
+		content: '';
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fcb49a' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath d='M8.74 3.07l6.3 6.3H1.89v1.57H15l-6.26 6.28 1.1 1.12 8.18-8.18-8.18-8.18-1.1 1.1z' stroke-width='.3'/%3E%3C/svg%3E");
+
+	}
 
 	.hs-button {
 
 		width: 100%;
-		background-color: #7b4865;
-		padding: 0 36px;
-		height: 68px;
-		font-size: 16px;
-		line-height: 68px;
-		border-radius: 8px;
+		text-align: left;
 
 	}
 
 }
 
-.hs-error-msg {
+.hs-error-msgs {
 
 	color: var(--error);
-	font-size: 14px;
-	line-height: 16px;
 
 }
 
-.hs-form-booleancheckbox {
+.hs-error-msg {
+
+	font-size: 14px;
+	line-height: 20px;
+
+}
+
+.submitted-message {
+
+	text-align: center;
+	margin: 36px 0;
+	font-size: 16px;
+	font-weight: 500;
+	color: var(--HoverCoral);
+
+}
+
+.hs-form-booleancheckbox-display {
 
 	display: block;
 	position: relative;
 	cursor: pointer;
+	margin-top: 24px;
 
 	font-size: 14px;
 	line-height: 20px;
-	color: var(--text);
+	color: var(--SecondaryPurple);
 
 	.hs-form-required {
 
@@ -365,7 +311,7 @@
 				border-radius: 4px;
 				position: absolute;
 				background-color: #fff;
-				border: 1px solid #C9C4CB;
+				border: 1px solid color(var(--border) a(15%));
 				top: 0;
 				left: 0;
 				content: '';
@@ -375,6 +321,7 @@
 			a {
 
 				text-decoration: underline;
+				color: var(--color);
 
 				@media ($desktop) {
 
@@ -392,10 +339,10 @@
 
 		&:checked + span::before {
 
-			background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.5 11.379l6.895-6.895 1.06 1.06L7.502 13.5 2.728 8.727l1.06-1.06 3.713 3.712z' fill='%237B4865' stroke='%237B4865'/%3E%3C/svg%3E");
+			background-image: url("data:image/svg+xml,%3Csvg width='19' height='18' viewBox='0 0 19 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.57 11.38l6.9-6.9 1.06 1.06-7.96 7.96L2.8 8.73l1.06-1.06 3.71 3.7z' fill='%237B4865' stroke='%237B4865'/%3E%3C/svg%3E");
 			background-position: center;
 			background-repeat: no-repeat;
-			border-color: var(--color);
+			border-color: var(--border);
 
 		}
 

@@ -1,8 +1,7 @@
 .header {
 
 	position: relative;
-	padding: 38px 0;
-	z-index: 1;
+	padding: 24px 0;
 
 	@media ($smWidth) {
 
@@ -24,30 +23,10 @@
 
 			img {
 
-				width: 96px;
+				width: 90px;
 				height: 30px;
 
 			}
-
-		}
-
-	}
-
-	&__social {
-
-		width: 296px;
-
-		@media ($mdWidth) {
-
-			margin-left: auto;
-			width: 192px;
-
-		}
-
-		@media ($smWidth) {
-
-			width: auto;
-			margin-right: 20px;
 
 		}
 
@@ -55,39 +34,11 @@
 
 	&__btns {
 
-		display: flex;
+		@media ($xsWidth) {
 
-		.btn {
-
-			margin-left: 12px;
-
-			svg {
+			.btn {
 
 				display: none;
-				fill: #fff;
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				margin: auto;
-
-			}
-
-			@media ($smWidth) {
-
-				width: 30px;
-				height: 30px;
-				color: transparent;
-				padding: 0;
-				font-size: 0;
-				border-radius: 6px;
-
-				svg {
-
-					display: block;
-
-				}
 
 			}
 
