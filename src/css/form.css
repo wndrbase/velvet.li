@@ -106,7 +106,6 @@
 
 }
 
-input.input,
 .hs-input {
 
 	height: 72px;
@@ -169,11 +168,23 @@ input.input,
 
 	}
 
+	&:invalid:not(:placeholder-shown):not(:focus) {
+
+		border-color: var(--error);
+
+	}
+
+	&:valid:not(:focus) {
+
+		border-color: var(--color);
+
+	}
+
 }
 
 .hs-form-field {
 
-	margin: 24px 0;
+	margin: 12px 0;
 
 	& > label {
 
@@ -201,27 +212,65 @@ input.input,
 .hs_submit {
 
 	margin-top: 24px;
+	position: relative;
+
+	&::after {
+
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		top: 0;
+		right: 36px;
+		bottom: 0;
+		margin: auto;
+		pointer-events: none;
+		content: '';
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fcb49a' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath d='M8.74 3.07l6.3 6.3H1.89v1.57H15l-6.26 6.28 1.1 1.12 8.18-8.18-8.18-8.18-1.1 1.1z' stroke-width='.3'/%3E%3C/svg%3E");
+
+	}
+
+	.hs-button {
+
+		width: 100%;
+		text-align: left;
+
+	}
+
+}
+
+.hs-error-msgs {
+
+	color: var(--error);
 
 }
 
 .hs-error-msg {
 
-	color: var(--error);
 	font-size: 14px;
-	line-height: 16px;
+	line-height: 20px;
 
 }
 
-.hs-form-booleancheckbox {
+.submitted-message {
+
+	text-align: center;
+	margin: 36px 0;
+	font-size: 16px;
+	font-weight: 500;
+	color: var(--HoverCoral);
+
+}
+
+.hs-form-booleancheckbox-display {
 
 	display: block;
 	position: relative;
 	cursor: pointer;
+	margin-top: 24px;
 
 	font-size: 14px;
 	line-height: 20px;
 	color: var(--SecondaryPurple);
-	margin: 24px 0;
 
 	.hs-form-required {
 
