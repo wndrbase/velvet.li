@@ -10,12 +10,12 @@
 
 	&__title {
 
-		margin-bottom: 168px;
+		margin-bottom: 72px;
 		max-width: 500px;
 
 		@media ($mdWidth) {
 
-			margin-bottom: 96px;
+			margin-bottom: 36px;
 
 		}
 
@@ -32,14 +32,35 @@
 
 		}
 
-		li {
+		&-item {
 
 			width: 320px;
 
 			@media ($mdWidth) {
 
 				width: auto;
-				margin-top: 96px;
+				margin-top: 24px;
+
+				.h2 {
+
+					margin-bottom: 6px;
+
+				}
+
+			}
+
+			img {
+
+				border-radius: 20px;
+				display: block;
+				margin-bottom: 24px;
+
+				@media ($xsWidth) {
+
+					width: 100%;
+					object-fit: cover;
+
+				}
 
 			}
 

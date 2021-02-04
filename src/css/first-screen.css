@@ -2,18 +2,10 @@
 
 	position: relative;
 	overflow: hidden;
-	margin: 48px 0 0;
-
-	@media ($smWidth) {
-
-		margin: 40px 0 32px;
-
-	}
 
 	&__wrap {
 
 		display: flex;
-		align-items: flex-end;
 		justify-content: space-between;
 
 		@media ($mdWidth) {
@@ -28,11 +20,11 @@
 
 		width: 500px;
 		flex-shrink: 0;
-		padding-top: 48px;
+		padding-top: 60px;
 
 		@media ($mdWidth) {
 
-			padding: 0;
+			padding-top: 40px;
 			width: 100%;
 
 		}
@@ -77,41 +69,33 @@
 
 	&__img {
 
-		width: 566px;
-		height: 511px;
+		width: 500px;
 		position: relative;
+
+		&-bg {
+
+			position: absolute;
+			top: 48px;
+			right: -60px;
+			fill: var(--DarkPurple);
+
+			@media ($smWidth) {
+
+				display: none;
+
+			}
+
+		}
 
 		@media ($mdWidth) {
 
-			margin: 38px auto;
+			margin: 48px auto;
 
 		}
 
 		@media ($smWidth) {
 
-			width: 320px;
-			height: 288px;
-
-		}
-
-		&-bg {
-
-			position: absolute;
-			left: 44px;
-			bottom: -20px;
-
-			@media ($mdWidth) {
-
-				left: 10px;
-
-			}
-
-			@media ($smWidth) {
-
-				left: 0;
-				bottom: -11px;
-
-			}
+			width: auto;
 
 		}
 
@@ -120,18 +104,16 @@
 	&__picture {
 
 		position: absolute;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		margin: auto;
+		top: 96px;
+		left: -40px;
 
 		@media ($smWidth) {
 
-			width: 206px;
-			height: 257px;
-			object-fit: contain;
-			object-position: bottom;
-			right: 62px;
+			width: 100%;
+			height: auto;
+			top: 0;
+			left: 0;
+			position: relative;
 
 		}
 
@@ -143,13 +125,14 @@
 		font-size: 16px;
 		line-height: 28px;
 		text-align: center;
-		margin: 80px auto;
+		margin: 114px auto 96px;
 		width: 720px;
 		max-width: 100%;
 
 		@media ($smWidth) {
 
-			display: none;
+			margin: 60px 0;
+			text-align: left;
 
 		}
 

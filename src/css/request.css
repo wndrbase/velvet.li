@@ -11,7 +11,6 @@
 	&__box {
 
 		display: flex;
-		justify-content: space-between;
 
 		@media ($mdWidth) {
 
@@ -35,42 +34,12 @@
 
 	&__title {
 
-		display: flex;
-		flex-wrap: wrap;
+		margin-bottom: 60px;
+		max-width: 500px;
 
-		&-item {
+		@media ($mdWidth) {
 
-			white-space: nowrap;
-			position: relative;
-
-			&--bg-left {
-
-				margin-left: 5px;
-				padding-left: 7px;
-				background-image: linear-gradient(to right, color(var(--HoverCoral) a(50%)), rgba(255, 255, 255, 0));
-				border-radius: 8px;
-
-				@media ($mdWidth) {
-
-					margin-left: 2px;
-
-				}
-
-			}
-
-			&--bg-right {
-
-				padding-right: 12px;
-				background-image: linear-gradient(to left, color(var(--HoverCoral) a(50%)), rgba(255, 255, 255, 0));
-				border-radius: 8px;
-
-				@media ($mdWidth) {
-
-					padding-right: 8px;
-
-				}
-
-			}
+			margin-bottom: 36px;
 
 		}
 
@@ -78,18 +47,43 @@
 
 	&__form {
 
-		width: 400px;
-		margin-right: 68px;
-
-		@media ($mdWidth) {
-
-			margin: 36px 0;
-
-		}
+		background-color: #DCDEE6;
+		border-radius: 20px;
+		padding: 60px;
 
 		@media ($smWidth) {
 
-			width: auto;
+			padding: 0;
+			background-color: transparent;
+
+		}
+
+	}
+
+	&__img {
+
+		width: 446px;
+		margin-left: 80px;
+		position: relative;
+		background-color: #DCDEE6;
+		border-radius: 20px;
+		background-size: cover;
+		background-image: url("data:image/svg+xml,%3Csvg width='445' height='529' viewBox='0 0 445 529' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M173.17 58.91a23.46 23.46 0 00-6.3 5.38c-18.85 22.3 10.52 87.43 48.52 134.87 36.04 45.01 82.6 81.65 131.14 103.17l3.93 1.75-.08-4.25c-.37-35.16-9.65-90.5-51.75-155.03-31.72-48.6-82.28-88.51-112.77-88.92-4.93.01-9.13.97-12.69 3.03zM62.11 251.28a13 13 0 00-5.24 5.95c-4.99 10.37-4.96 38.6 26.95 78.68 29.2 36.62 73.5 66.98 94.29 75.9l5.78 2.43-.56-4.61c-3.6-32.2-18.93-69.05-44.49-106.67-30.74-45.33-59.23-54.93-71.16-53.44-2.1.3-4 .85-5.57 1.76zM305.68 442c-28.58 16.5-57.69 20.88-91.6 13.76l-2.51-.55-.67 2.48c-6.17 22.4-18.87 40.79-37.7 54.86a66.82 66.82 0 01-6.69 4.41c-19.26 11.12-46.9 16.3-66.4 17.5-4.6.28-13.96.84-24.91.4A343.4 343.4 0 01-6.15 466c2-5.08 5.53-9.58 9.3-11.76 11.73-6.13 15.3-1.06 22.92 12 10.55 17.95 26.43 44.97 83.1 40.86 16.5-1.2 30.07-7.3 38.5-12.17a92.42 92.42 0 007.71-5c12.8-9.5 21.77-23.72 26-41.25l.58-2.33-2.26-.9a335.22 335.22 0 01-16.25-6.61C139.4 428.5 91 395.66 58.62 354.94c-31.92-40.07-43-80.48-29.62-108.13a47.32 47.32 0 0118.81-20.46 48.12 48.12 0 0118.61-6.08c32.04-3.87 68.15 19.88 98.9 65.2 26.68 39.26 43.92 81.32 48.6 118.38.85 6.55 1.23 12.91 1.32 19.08l.01 2.09 2.06.55c28.66 7.21 51.35 4.72 73.63-8.15 7.95-4.59 16.04-10.53 24.72-18.3 15.43-13.65 26.28-34.9 31.44-61.28l.43-2.26-4.83-1.88c-56.6-22.35-110.8-63.35-152.52-115.5-9.51-11.88-91.84-117.91-46.78-171.26a58.64 58.64 0 0115.5-13.06c8.91-5.15 18.97-7.67 30.01-7.55 46.54.65 103.85 51.47 136.42 101.4 39.53 60.55 59.32 126.18 55.82 184.87l-.14 2.28 2.16.58c37.05 9.87 69.17 7.87 92.82-5.79 1.1-.63 2.2-1.26 3.25-1.97 21.85-14.07 35.56-36.89 39.6-65.82 9.68-69.85-41.44-165.2-140.47-271l1.98-1.33C492.74 77.61 550.9 186.26 546.91 245.05c-2.5 37-19.93 66.17-51.72 86.63-1.61 1.02-3.15 2-4.72 2.9-29.69 17.15-68.01 20.9-110.86 10.81l-2.66-.65-.66 2.66c-7.22 30.4-21.18 55.46-40.43 72.61-10.15 8.88-20.24 16.25-30.18 22z' fill='%23fff'/%3E%3Cpath d='M0 1a60 60 0 10120 0H0z' fill='%23FCB49A'/%3E%3Cpath d='M-60-43H60V77a60 60 0 01-120 0V-43z' fill='%23fff'/%3E%3Crect x='386.07' y='349' width='120' height='240' rx='60' fill='%23fff'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='445' height='529' rx='24' fill='%23fff'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+
+		img {
+
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			border-radius: 0 0 20px 20px;
+
+		}
+
+		@media ($mdWidth) {
+
+			display: none;
 
 		}
 

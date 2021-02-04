@@ -2,13 +2,17 @@
 
 	flex-shrink: 0;
 	color: #fff;
+	margin: 0 24px 24px;
+	border-radius: 20px;
 	position: relative;
-	padding: 96px 0 104px;
+	padding: 70px 0;
 	background-color: var(--DarkPurple);
 
 	@media ($mdWidth) {
 
 		padding: 60px 0;
+		margin: 0;
+		border-radius: 0;
 
 	}
 
@@ -234,6 +238,7 @@
 				color: var(--HoverCoral);
 				padding-right: 22px;
 				margin-left: 4px;
+				white-space: nowrap;
 				background-position: right;
 				background-repeat: no-repeat;
 				background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.67 3v1.33H3.33v7.34h7.34V8.33H12v4a.67.67 0 01-.67.67H2.67a.67.67 0 01-.67-.67V3.67A.67.67 0 012.67 3h4zM14 1v5.33h-1.33V3.28l-5.2 5.2-.94-.95 5.2-5.2H8.66V1H14z' fill='%23FCB49A'/%3E%3C/svg%3E");
