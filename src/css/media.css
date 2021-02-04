@@ -16,7 +16,16 @@
 .center {
 
 	margin: 0 auto;
-	width: 1128px;
+	width: 1080px;
+	max-width: 100%;
+	position: relative;
+
+}
+
+.center-wide {
+
+	margin: 0 auto;
+	width: 1500px;
 	max-width: 100%;
 	position: relative;
 	padding: 0 24px;
@@ -45,7 +54,7 @@
 	.center {
 
 		width: 768px;
-		padding: 0 36px;
+		padding: 0 20px;
 
 	}
 
@@ -67,7 +76,13 @@
 
 	.center {
 
-		padding: 0 20px;
+		width: 520px;
+
+	}
+
+	.center-wide {
+
+		padding: 0;
 
 	}
 

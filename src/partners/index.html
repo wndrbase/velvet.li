@@ -1,0 +1,109 @@
+{% set title = "Our partners" %}
+
+{% set description = "Velvet — your personalised collaboration and payments platform" %}
+
+{% set urlMain = '' %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="partners">
+
+		<div class="center">
+
+			<h1 class="partners__title h1">
+				{{ title }}
+			</h1>
+
+			<ul class="partners__list">
+
+				<li class="partners__item">
+
+					<div class="partners__logo">
+
+						<a href="https://paypugs.com/" target="_blank" rel="noopener">
+
+							<img src="/img/partners/paypugs.svg" alt="PayPugs" loading="lazy" width="140" height="30">
+
+						</a>
+
+					</div>
+
+					<h3 class="h2">
+						PayPugs
+					</h3>
+
+					<p>
+						An online payment solution for all. Putting you in charge of your finances, offering simple, clear and transparent solutions.
+					</p>
+
+				</li>
+
+				<li class="partners__item">
+
+					<div class="partners__logo">
+
+						<a href="http://sumsub.com" target="_blank" rel="noopener">
+
+							<picture>
+
+								<source srcset="/img/partners/sum.webp 1x, /img/partners/sum@2x.webp 2x" type="image/webp">
+								<source srcset="/img/partners/sum.png 1x, /img/partners/sum@2x.png 2x">
+
+								<img src="/img/partners/sum.png" alt="SumSub" loading="lazy" width="94" height="60">
+
+							</picture>
+
+						</a>
+
+					</div>
+
+					<h3 class="h2">
+						SumSub
+					</h3>
+
+					<p>
+						SumSub empowers compliance and anti-fraud teams to fight money laundering, terrorist financing, and online fraud.
+					</p>
+
+				</li>
+
+				<li class="partners__item">
+
+					<div class="partners__logo">
+
+						<a href="https://coworkingassembly.eu" target="_blank" rel="noopener">
+
+							<picture>
+
+								<source srcset="/img/partners/eca.webp 1x, /img/partners/eca@2x.webp 2x" type="image/webp">
+								<source srcset="/img/partners/eca.png 1x, /img/partners/eca@2x.png 2x">
+
+								<img src="/img/partners/eca.png" alt="ECA" loading="lazy" width="110" height="58">
+
+							</picture>
+
+						</a>
+
+					</div>
+
+					<h3 class="h2">
+						European Coworking Assembly (ECA)
+					</h3>
+
+					<p>
+						The ECA supports the coworking community which branches its role as the infrastructure of the new economy.
+					</p>
+
+				</li>
+
+			</ul>
+
+		</div>
+
+	</article>
+
+{% include "main/request.html" %}
+
+{% endblock %}

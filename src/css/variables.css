@@ -1,12 +1,14 @@
 :root {
 
-	--color: #412e46;
-	--text: #7e7e7e;
+	--color: #38303a;
 	--error: #db2f2f;
-	--bg: #f3ebe2;
-	--blue: blue;
+	--bg: #fff;
 	--border: #412e46;
-	--green: green;
+	--DarkPurple: #412e46;
+	--MainPurple: #7b4865;
+	--SecondaryPurple: #a096a2;
+	--HoverCoral: #fcb49a;
+	--Orange: #ff9a3d;
 	--transitionDefault: .3s;
 
 }
