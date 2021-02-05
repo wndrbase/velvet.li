@@ -28,6 +28,12 @@
 
 		@media ($mdWidth) {
 
+			flex-wrap: wrap;
+
+		}
+
+		@media ($smWidth) {
+
 			display: block;
 
 		}
@@ -38,7 +44,6 @@
 
 			@media ($mdWidth) {
 
-				width: auto;
 				margin-top: 24px;
 
 				.h2 {
@@ -46,6 +51,12 @@
 					margin-bottom: 6px;
 
 				}
+
+			}
+
+			@media ($smWidth) {
+
+				width: 100%;
 
 			}
 

@@ -63,6 +63,7 @@
 	&__img {
 
 		width: 446px;
+		min-height: 528px;
 		margin-left: 80px;
 		position: relative;
 		background-color: #DCDEE6;

@@ -1,0 +1,37 @@
+{% set title = "Imprint/Licensing" %}
+
+{% set description = "Financial services are provided by Velvet Finance Limited" %}
+
+{% set urlPage = "imprint-licensing" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<div class="center">
+
+		<article class="page-text">
+
+			<header class="page-text__header">
+
+				<h1>
+					{{ title }}
+				</h1>
+
+				<p>
+					Version: 3.0 (27.10.2020)
+				</p>
+
+			</header>
+
+			<div class="page-text__body">
+
+{% include urlPage + "/body.html" %}
+
+			</div>
+
+		</article>
+
+	</div>
+
+{% endblock %}

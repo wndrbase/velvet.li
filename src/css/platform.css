@@ -37,6 +37,12 @@
 		justify-content: space-between;
 		margin-right: 24px;
 
+		@media ($mdWidth) {
+
+			margin-right: 0;
+
+		}
+
 		&-item {
 
 			width: 336px;

@@ -89,13 +89,14 @@
 
 		@media ($mdWidth) {
 
-			margin: 48px auto;
+			margin: 48px auto 192px;
 
 		}
 
 		@media ($smWidth) {
 
 			width: auto;
+			margin: 48px auto;
 
 		}
 
@@ -107,13 +108,18 @@
 		top: 96px;
 		left: -40px;
 
-		@media ($smWidth) {
+		@media ($mdWidth) {
 
 			width: 100%;
 			height: auto;
+			position: relative;
+
+		}
+
+		@media ($smWidth) {
+
 			top: 0;
 			left: 0;
-			position: relative;
 
 		}
 
