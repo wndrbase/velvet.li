@@ -11,6 +11,7 @@
 	&__box {
 
 		display: flex;
+		align-items: center;
 		justify-content: space-between;
 
 		@media ($mdWidth) {
@@ -94,9 +95,8 @@
 
 	&__list {
 
-		font-weight: 300;
-		font-size: 16px;
-		line-height: 28px;
+		font-size: 18px;
+		line-height: 30px;
 		margin-bottom: 60px;
 
 		@media ($smWidth) {
@@ -105,7 +105,7 @@
 
 			li {
 
-				margin: 12px 0;
+				margin: 18px 0;
 
 			}
 
