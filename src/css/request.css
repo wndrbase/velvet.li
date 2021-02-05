@@ -50,6 +50,7 @@
 		background-color: #DCDEE6;
 		border-radius: 20px;
 		padding: 60px;
+		min-height: 528px;
 
 		@media ($smWidth) {
 
@@ -63,7 +64,6 @@
 	&__img {
 
 		width: 446px;
-		min-height: 528px;
 		margin-left: 80px;
 		position: relative;
 		background-color: #DCDEE6;
