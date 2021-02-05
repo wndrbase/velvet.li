@@ -6,8 +6,8 @@
 
 	<title>Velvet Platform</title>
 
-	<link href="/css/styles.min.css?1612453564452" rel="preload" as="style">
-	<link href="/js/scripts.min.js?1612453564452" rel="preload" as="script">
+	<link href="/css/styles.css" rel="preload" as="style">
+	<link href="/js/scripts.js" rel="preload" as="script">
 
 	<link href="/fonts/poppins-v13-latin-ext_latin-300.woff2" rel="preload" as="font" type="font/woff2" crossorigin>
 	<link href="/fonts/poppins-v13-latin-ext_latin-400.woff2" rel="preload" as="font" type="font/woff2" crossorigin>
@@ -41,8 +41,8 @@
 	<meta property="og:image:height" content="236">
 
 
-	<link href="/css/styles.min.css?1612453564452" rel="stylesheet">
-	<script defer src="/js/scripts.min.js?1612453564452"></script>
+	<link href="/css/styles.css" rel="stylesheet">
+	<script defer src="/js/scripts.js"></script>
 
 
 	<link href="/img/first-screen/img--mobile.webp" rel="preload" as="image" media="(max-width: 767px)">
@@ -108,25 +108,9 @@
 
 			</div>
 
-			<div class="first-screen__img fade-in fade-in--600">
+			<div class="first-screen__img">
 
-				<svg class="first-screen__img-bg hidden-sm" width="594" height="536" viewBox="0 0 594 536">
-					<rect opacity=".2" x="76" y="103" width="393" height="413" rx="36" fill="#A096A2"/>
-					<circle cx="428.84" cy="164.84" r="164.84" fill="#FCB49A"/>
-					<circle cx="76" cy="103" r="76" fill="#412E46"/>
-					<circle cx="457.21" cy="494.21" r="41.21" fill="#D9D5DA"/>
-					<circle cx="40.48" cy="460.48" r="16.48" fill="#FBDACD"/>
-					<circle cx="530.48" cy="379.48" r="16.48" fill="#7B4865"/>
-				</svg>
-
-				<svg class="first-screen__img-bg visible-sm" width="321" height="289" viewBox="0 0 321 289">
-					<rect opacity=".2" x="41.47" y="55.52" width="211.83" height="222.61" rx="36" fill="#A096A2"/>
-					<circle cx="231.65" cy="88.85" r="88.85" fill="#FCB49A"/>
-					<circle cx="41.47" cy="55.52" r="40.97" fill="#412E46"/>
-					<circle cx="246.94" cy="266.39" r="22.21" fill="#D9D5DA"/>
-					<circle cx="22.32" cy="248.21" r="8.89" fill="#FBDACD"/>
-					<circle cx="286.44" cy="204.55" r="8.89" fill="#7B4865"/>
-				</svg>
+				<svg class="first-screen__img-bg" width="516" height="568" viewBox="0 0 516 568"><path d="M516 547.88c0 18.33-22.6 27-34.87 13.38L6.04 33.38C-5.54 20.5 3.6 0 20.91 0H496a20 20 0 0120 20v527.88z"/></svg>
 
 				<picture>
 
@@ -136,7 +120,7 @@
 					<source srcset="/img/first-screen/img.webp 1x, /img/first-screen/img@2x.webp 2x" type="image/webp">
 					<source srcset="/img/first-screen/img.png 1x, /img/first-screen/img@2x.png 2x">
 
-					<img class="first-screen__picture" src="/img/first-screen/img.png" alt="Velvet Platform" loading="lazy" width="380" height="474">
+					<img class="first-screen__picture" src="/img/first-screen/img.png" alt="Velvet Platform" loading="lazy" width="480" height="486">
 
 				</picture>
 
@@ -144,7 +128,7 @@
 
 		</div>
 
-		<div class="first-screen__foot fade-in fade-in--800">
+		<div class="first-screen__foot fade-in">
 
 			<p>
 				With Velvet Platform you can make and receive multi-currency payments quicker than you can read this! Send and receive money for your work, sales and projects on your terms. Join the collaboration platform designed with collaborators, freelancers, start-ups, organisers and project managers in mind.
@@ -168,14 +152,14 @@
 					Getting to know you is the basis of everything we do!
 				</h1>
 
-				<p class="approach__intro fade-in fade-in--200">
+				<p class="approach__intro fade-in fade-in--300">
 					How else would we know what you want from your collaboration platform? <br>
 					We know that your projects are personal — so we keep it that way!
 				</p>
 
 			</div>
 
-			<h2 class="approach__heading h2 fade-in fade-in--400">
+			<h2 class="approach__heading h2 fade-in fade-in--200">
 				Through our personalised approach you can:
 			</h2>
 
@@ -217,7 +201,7 @@
 
 				</li>
 
-				<li class="approach__list-item fade-in fade-in--500">
+				<li class="approach__list-item fade-in">
 
 					<div class="approach__list-ico">
 						<svg width="36" height="36" viewBox="0 0 36 36">
@@ -229,7 +213,7 @@
 
 				</li>
 
-				<li class="approach__list-item fade-in fade-in--700">
+				<li class="approach__list-item fade-in fade-in--200">
 
 					<div class="approach__list-ico">
 						<svg width="36" height="36" viewBox="0 0 36 36">
@@ -241,7 +225,7 @@
 
 				</li>
 
-				<li class="approach__list-item fade-in fade-in--900">
+				<li class="approach__list-item fade-in fade-in--400">
 
 					<div class="approach__list-ico approach__list-ico--contact-us">
 						<svg width="36" height="36" viewBox="0 0 36 36">
@@ -274,7 +258,16 @@
 
 		<div class="economy__box">
 
-			<div class="economy__img fade-in fade-in--400">
+			<div class="economy__img hidden-sm">
+
+				<picture>
+
+					<source srcset="/img/economy/img.webp 1x, /img/economy/img@2x.webp 2x" type="image/webp">
+					<source srcset="/img/economy/img.png 1x, /img/economy/img@2x.png 2x">
+
+					<img src="/img/economy/img.png" alt="Velvet Platform" loading="lazy" width="566" height="696">
+
+				</picture>
 
 			</div>
 
@@ -283,6 +276,19 @@
 				<h1 class="economy__title h1 fade-in">
 					You’re not saving but changing the economy!
 				</h1>
+
+				<div class="economy__img visible-sm">
+
+					<picture>
+
+						<source srcset="/img/economy/img--mobile.webp" type="image/webp">
+						<source srcset="/img/economy/img--mobile.png">
+
+						<img src="/img/economy/img--mobile.png" alt="Velvet Platform" loading="lazy" width="320" height="395">
+
+					</picture>
+
+				</div>
 
 				<ul class="economy__list">
 
@@ -355,7 +361,7 @@
 
 				</li>
 
-				<li class="platform__list-item fade-in fade-in--300">
+				<li class="platform__list-item fade-in fade-in--400">
 
 					<div class="platform__list-ico">
 						<svg width="30" height="30" viewBox="0 0 30 30">
@@ -367,7 +373,7 @@
 
 				</li>
 
-				<li class="platform__list-item fade-in fade-in--400">
+				<li class="platform__list-item fade-in">
 
 					<div class="platform__list-ico">
 						<svg width="30" height="30" viewBox="0 0 30 30">
@@ -379,7 +385,7 @@
 
 				</li>
 
-				<li class="platform__list-item fade-in fade-in--500">
+				<li class="platform__list-item fade-in fade-in--200">
 
 					<div class="platform__list-ico">
 						<svg width="30" height="30" viewBox="0 0 30 30">
@@ -391,7 +397,7 @@
 
 				</li>
 
-				<li class="platform__list-item fade-in fade-in--600">
+				<li class="platform__list-item fade-in fade-in--400">
 
 					<div class="platform__list-ico">
 						<svg width="30" height="30" viewBox="0 0 30 30">
@@ -403,7 +409,7 @@
 
 				</li>
 
-				<li class="platform__list-item fade-in fade-in--700">
+				<li class="platform__list-item fade-in">
 
 					<div class="platform__list-ico">
 						<svg width="30" height="30" viewBox="0 0 30 30">
@@ -415,7 +421,7 @@
 
 				</li>
 
-				<li class="platform__list-item fade-in fade-in--800">
+				<li class="platform__list-item fade-in fade-in--200">
 
 					<div class="platform__list-ico">
 						<svg width="30" height="30" viewBox="0 0 30 30">
@@ -427,7 +433,7 @@
 
 				</li>
 
-				<li class="platform__list-item fade-in fade-in--900">
+				<li class="platform__list-item fade-in fade-in--400">
 
 					<div class="platform__list-ico">
 						<svg width="30" height="30" viewBox="0 0 30 30">
@@ -457,7 +463,16 @@
 
 		<div class="benefits__list">
 
-			<div class="fade-in fade-in--200">
+			<div class="benefits__list-item fade-in">
+
+				<picture>
+
+					<source srcset="/img/benefits/6.webp 1x, /img/benefits/6@2x.webp 2x" type="image/webp">
+					<source srcset="/img/benefits/6.png 1x, /img/benefits/6@2x.png 2x">
+
+					<img src="/img/benefits/6.png" alt="Velvet Platform" loading="lazy" width="320" height="160">
+
+				</picture>
 
 				<h3 class="h2">
 					Make custom payments <br>Your project, your way
@@ -469,7 +484,16 @@
 
 			</div>
 
-			<div class="fade-in fade-in--400">
+			<div class="benefits__list-item fade-in fade-in--200">
+
+				<picture>
+
+					<source srcset="/img/benefits/7.webp 1x, /img/benefits/7@2x.webp 2x" type="image/webp">
+					<source srcset="/img/benefits/7.png 1x, /img/benefits/7@2x.png 2x">
+
+					<img src="/img/benefits/7.png" alt="Velvet Platform" loading="lazy" width="320" height="160">
+
+				</picture>
 
 				<h3 class="h2">
 					Fund security <br>You have peace of mind
@@ -481,7 +505,16 @@
 
 			</div>
 
-			<div class="fade-in fade-in--600">
+			<div class="benefits__list-item fade-in fade-in--400">
+
+				<picture>
+
+					<source srcset="/img/benefits/8.webp 1x, /img/benefits/8@2x.webp 2x" type="image/webp">
+					<source srcset="/img/benefits/8.png 1x, /img/benefits/8@2x.png 2x">
+
+					<img src="/img/benefits/8.png" alt="Velvet Platform" loading="lazy" width="320" height="160">
+
+				</picture>
 
 				<h3 class="h2">
 					No more workarounds <br>Velvet works just the way <br>you do
@@ -503,19 +536,30 @@
 
 	<div class="center">
 
+		<h1 class="request__title h1 fade-in">
+			Request an early invite
+		</h1>
+
 		<div class="request__box">
 
 			<div class="request__content">
 
-				<h1 class="request__title h1 fade-in">
-					<span class="request__title-item">Request an</span>
-					<span class="request__title-item request__title-item--bg-left"> early</span>
-					<span class="request__title-item request__title-item--bg-right">invite</span>
-				</h1>
+				<div class="request__form" id="request-form" data-hbspt-form="947e69de-4f39-4d4f-a9cb-498ba1df7f32"></div>
 
 			</div>
 
-			<div class="request__form" id="request-form" data-hbspt-form="947e69de-4f39-4d4f-a9cb-498ba1df7f32"></div>
+			<div class="request__img">
+
+				<picture>
+
+					<source srcset="/img/request/img.webp 1x, /img/request/img@2x.webp 2x" type="image/webp">
+					<source srcset="/img/request/img.png 1x, /img/request/img@2x.png 2x">
+
+					<img src="/img/request/img.png" alt="Velvet Platform" loading="lazy" width="446" height="528">
+
+				</picture>
+
+			</div>
 
 		</div>
 
@@ -616,7 +660,7 @@
 			<div class="footer__bottom">
 
 				<p class="footer__copyright">
-					Copyright © 2020 Velvet Company
+					Copyright © 2021 Velvet Company
 				</p>
 
 				<div class="footer__social">
