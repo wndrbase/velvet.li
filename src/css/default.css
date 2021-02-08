@@ -3,7 +3,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-/* color: red !important; */
+
 }
 
 html {
@@ -37,10 +37,6 @@ body {
 	overflow-y: scroll;
 	position: relative;
 	background-color: var(--bg);
-
-/* background-image: url(/css/2.png); */
-background-position: center 0px;
-
 
 }
 
@@ -133,6 +129,20 @@ svg {
 	@media ($smWidth) {
 
 		font-size: 18px;
+
+	}
+
+}
+
+.h3 {
+
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 30px;
+
+	@media ($smWidth) {
+
+		font-size: 16px;
 
 	}
 
