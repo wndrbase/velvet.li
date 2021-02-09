@@ -4,22 +4,17 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	padding: 24px 0;
+	padding: 12px 0;
 	z-index: 10;
 	background-color: #fef5ef;
-	border-radius: 16px;
-	margin: 24px;
 
 	@media ($mdWidth) {
 
-		margin: 12px;
+		.center {
 
-	}
+			width: 100%;
 
-	@media ($smWidth) {
-
-		margin: 0;
-		border-radius: 0;
+		}
 
 	}
 
@@ -38,8 +33,7 @@
 	&__text {
 
 		flex-grow: 1;
-		padding-right: 40px;
-		margin: 6px 0 12px;
+		padding-right: 48px;
 
 		@media ($smWidth) {
 
@@ -49,8 +43,8 @@
 
 		p {
 
-			margin: 10px 0 15px;
-			font-size: 14px;
+			margin-bottom: 8px;
+			font-size: 13px;
 			line-height: 20px;
 			color: var(--SecondaryPurple);
 
@@ -79,11 +73,15 @@
 		display: flex;
 		flex-shrink: 0;
 		align-items: center;
-		padding-left: 40px;
+
+		.btn {
+
+			width: 140px;
+
+		}
 
 		@media ($smWidth) {
 
-			padding: 0;
 			justify-content: center;
 
 		}
@@ -93,32 +91,26 @@
 	&__toggle-checkbox {
 
 		display: flex;
+		margin: 2px 0;
 
-		@media ($smWidth) {
+		.toggle-checkbox {
 
-			display: block;
-			margin: 20px 0;
-			padding: 10px 0;
-			border-top: 1px solid color(var(--color) a(7%));
-			border-bottom: 1px solid color(var(--color) a(7%));
-
-		}
-
-		&-sep {
-
-			width: 1px;
-			height: 25px;
-			background-color: color(var(--color) a(7%));
-			margin: 0 20px;
+			margin-right: 24px;
 
 			@media ($smWidth) {
 
 				margin: 10px 0;
-				height: 1px;
-				width: 100%;
-				display: block;
 
 			}
+
+		}
+
+		@media ($smWidth) {
+
+			display: block;
+			margin: 12px 0;
+			border-top: 1px solid color(var(--color) a(7%));
+			border-bottom: 1px solid color(var(--color) a(7%));
 
 		}
 
@@ -134,8 +126,8 @@
 	&__input {
 
 		position: absolute;
-		width: 40px;
-		height: 24px;
+		width: 36px;
+		height: 20px;
 		top: 0;
 		right: 0;
 		opacity: 0.001;
@@ -146,23 +138,17 @@
 
 	&__label {
 
-		font-size: 14px;
-		line-height: 24px;
-		padding-right: 60px;
+		font-size: 13px;
+		line-height: 20px;
+		padding-right: 48px;
 		cursor: pointer;
 		display: block;
-
-		@media ($smWidth) {
-
-			font-size: 14px;
-
-		}
 
 		&::before {
 
 			position: absolute;
-			width: 40px;
-			height: 24px;
+			width: 36px;
+			height: 20px;
 			top: 0;
 			right: 0;
 			background-color: var(--color);
@@ -175,8 +161,8 @@
 		&::after {
 
 			position: absolute;
-			width: 20px;
-			height: 20px;
+			width: 16px;
+			height: 16px;
 			top: 2px;
 			right: 2px;
 			content: '';
@@ -193,7 +179,7 @@
 
 		&::before {
 
-			background-color: var(--HoverCoral);
+			background-color:#6DEF73;
 
 		}
 

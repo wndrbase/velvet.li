@@ -134,19 +134,6 @@ svg {
 
 }
 
-.h3 {
-
-	font-weight: 600;
-	font-size: 18px;
-	line-height: 30px;
-
-	@media ($smWidth) {
-
-		font-size: 16px;
-
-	}
-
-}
 
 .fade-in {
 
