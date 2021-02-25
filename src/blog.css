@@ -1,0 +1,315 @@
+.hbspt-form-wrap {
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: color(#251b28 a(90%));
+	z-index: 999;
+	pointer-events: none;
+	visibility: hidden;
+
+	.show-popup-hubspot-form & {
+
+		visibility: visible;
+		pointer-events: auto;
+
+	}
+
+	&__inner {
+
+		width: 360px;
+		max-width: 100%;
+		position: relative;
+		padding: 60px;
+		box-sizing: content-box;
+		border-radius: 20px;
+		background-color: #fff;
+
+	}
+
+	&__close {
+
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		cursor: pointer;
+
+	}
+
+	.hs-button {
+
+		border: 0;
+		font-family: inherit;
+		cursor: pointer;
+		margin: 0;
+		box-sizing: border-box;
+		width: 100%;
+
+		padding: 0 36px;
+		height: 96px;
+		font-size: 20px;
+		line-height: 96px;
+		font-weight: 500;
+		color: #fcb49a !important;
+		border-radius: 12px;
+		background-color: #7b4865 !important;
+
+		&:focus {
+
+			outline: none;
+
+		}
+
+		&:hover {
+
+
+
+		}
+
+	}
+
+	.hs-form-field  + .hs-form-field {
+
+		margin-top: 20px;
+
+	}
+
+	.hs-error-msg {
+
+		font-size: 13px;
+		line-height: 20px;
+		color: #db2f2f;
+		padding-left: 25px;
+		background-repeat: no-repeat;
+		display: block;
+		margin: 10px 0;
+		background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 18.33a8.33 8.33 0 110-16.66 8.33 8.33 0 010 16.66zm0-9.5L7.64 6.45 6.46 7.64 8.82 10l-2.36 2.36 1.18 1.18L10 11.18l2.36 2.36 1.18-1.18L11.18 10l2.36-2.36-1.18-1.18L10 8.82z' fill='%23db2f2f'/%3E%3C/svg%3E");
+
+	}
+
+	.hs_error_rollup {
+
+		text-align: center;
+		color: #db2f2f;
+		margin: 16px 0;
+
+	}
+
+	.hs-form-required {
+
+		color: #db2f2f;
+
+	}
+
+	.submitted-message {
+
+		text-align: center;
+		font-size: 18px;
+		color: #38303a;
+
+	}
+
+	.input > .hs-input {
+
+		height: 72px;
+		line-height: 24px;
+
+		padding: 24px;
+
+		font-size: 16px;
+		color: #38303a;
+		font-weight: 300;
+
+		width: 100%;
+		font-family: inherit;
+		position: relative;
+		appearance: none;
+		display: block;
+		filter: none;
+		-webkit-transform: translateZ(0px); /* FIX for iOS safari https://forum.ionicframework.com/t/ion-input-shows-only-the-first-entered-character-on-ios/73107/5 */
+
+		background-color: #fff;
+		border: 1px solid rgba(65,46,70,.15);
+		border-radius: 12px;
+		margin: 0;
+		box-sizing: border-box;
+
+		&::-ms-clear {
+
+			display: none;
+
+		}
+
+		&::placeholder {
+
+			opacity: .5;
+
+		}
+
+		&:hover {
+
+			border-color: #38303a;
+
+		}
+
+		&:focus {
+
+			outline: none;
+			background-color: #fff;
+
+			&::placeholder {
+
+				opacity: 1;
+
+			}
+
+		}
+
+		&.error {
+
+			border-color: #db2f2f;
+
+		}
+
+		&:invalid:not(:placeholder-shown):not(:focus) {
+
+			border-color: #db2f2f;
+
+		}
+
+		&:valid:not(:focus) {
+
+			border-color: #38303a;
+
+		}
+
+	}
+
+	.inputs-list {
+
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+
+			margin: 0;
+			padding: 0;
+
+		}
+
+	}
+
+	.hs-form-booleancheckbox-display {
+
+		display: block;
+		position: relative;
+		cursor: pointer;
+
+		font-size: 14px;
+		line-height: 20px;
+		color: #a096a2;
+		font-family: inherit;
+		margin: 12px 0;
+
+		.hs-input {
+
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			top: 0;
+			left: 0;
+			opacity: 0.001;
+			z-index: -1;
+			appearance: none;
+
+		}
+
+		.hs-input + span  {
+
+			display: block;
+			font-weight: 400;
+			padding: 2px 0 2px 36px;
+
+			&::before {
+
+				width: 22px;
+				height: 22px;
+				border-radius: 4px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				content: '';
+				background-color: #fff;
+				border: 1px solid rgba(65,46,70,.15);
+
+			}
+
+			a {
+
+				text-decoration: underline;
+				color: #38303a;
+
+				&:hover {
+
+					text-decoration: none;
+
+				}
+
+			}
+
+		}
+
+		.hs-input:checked + span::before {
+
+			background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='10' height='10' rx='3'/%3E%3C/svg%3E");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-color: #fff;
+			border-color: #38303a;
+
+		}
+
+		.hs-form-required {
+
+			color: #db2f2f;
+
+		}
+
+	}
+
+	.hs_submit {
+
+		position: relative;
+		margin-top: 20px;
+
+		.hs-button {
+
+			width: 100%;
+			text-align: left;
+
+		}
+
+		&::after {
+
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			top: 0;
+			right: 36px;
+			bottom: 0;
+			margin: auto;
+			pointer-events: none;
+			content: '';
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fcb49a' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath d='M8.74 3.07l6.3 6.3H1.89v1.57H15l-6.26 6.28 1.1 1.12 8.18-8.18-8.18-8.18-1.1 1.1z' stroke-width='.3'/%3E%3C/svg%3E");
+
+		}
+
+	}
+
+}
