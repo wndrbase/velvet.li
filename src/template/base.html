@@ -15,6 +15,10 @@
 	<link href="/fonts/poppins-v13-latin-ext_latin-600.woff2" rel="preload" as="font" type="font/woff2" crossorigin>
 	<link href="/fonts/poppins-v13-latin-ext_latin-700.woff2" rel="preload" as="font" type="font/woff2" crossorigin>
 
+{% if build %}
+	<link rel="preconnect" href="https://www.googletagmanager.com/">
+{% endif %}
+
 	<link href="{{ url }}/favicon.png" rel="apple-touch-icon-precomposed">
 
 	<meta name="format-detection" content="telephone=no">
@@ -47,6 +51,17 @@
 {% for item in preloadImage %}
 	<link href="{{ item.img }}" rel="preload" as="image" media="{{ item.media }}">
 {% endfor %}
+
+{% if build %}
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-191566835-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-191566835-2');
+</script>
+{% endif %}
 
 </head>
 
