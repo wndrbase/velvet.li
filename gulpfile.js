@@ -59,7 +59,7 @@ gulp.task('html', function() {
 		.pipe(debug({title: 'html:'}))
 		.pipe(nunjucksRender({
 			data: {
-				url: 'https://VelvetPlatform.com',
+				url: 'http://' + domain,
 				site: site
 			},
 			path: 'src/'

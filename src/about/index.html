@@ -1,0 +1,287 @@
+{% set title = "About us" %}
+
+{% set description = "Our current territories/footprint stretches across the USA, United Kingdom, Estonia, and The Netherlands. Soon we will also be present in Canada and Australia… and that is only the start!" %}
+
+{% set preloadImage = [
+	{
+		media: "(max-width: 360px)",
+		img : "/img/about/1--640.webp"
+	},
+	{
+		media: "(min-width: 361px)",
+		img : "/img/about/1--504.webp"
+	},
+	{
+		media: "(min-width: 1200px)",
+		img : "/img/about/2--504.webp"
+	}
+] %}
+
+
+{% set ogImage = "img/about/1--1008.jpg" %}
+{% set ogImage236 = "img/about/1--504.jpg" %}
+
+{% set urlPage = "about" %}
+
+{% extends "template/base.html" %}
+
+{% block content %}
+
+	<article class="about center">
+
+		<h1 class="h1">
+			Who we are
+		</h1>
+
+		<div class="about-column">
+
+			<div class="about-column__col">
+
+				<div class="about-column__text">
+
+					<p>
+						Our current territories/footprint stretches across the USA, United Kingdom, Estonia, and The Netherlands.
+					</p>
+
+					<p>
+						Soon we will also be present in Canada and Australia… and that is only the start!
+					</p>
+
+					<p>
+						Once you have joined any of our family of companies you can enjoy the product set of all of them with the push of a button.
+					</p>
+
+				</div>
+
+				<div class="about-column__img">
+
+					<picture>
+
+						<source srcset="/img/about/1--640.webp" media="(max-width: 360px)" type="image/webp">
+						<source srcset="/img/about/1--640.jpg" media="(max-width: 360px)">
+
+						<source srcset="/img/about/1--504.webp 1x, /img/about/1--1008.webp 2x" type="image/webp">
+						<source srcset="/img/about/1--504.jpg 1x, /img/about/1--1008.jpg 2x">
+
+						<img src="/img/about/1--504.jpg" alt="" width="504" height="504" loading="lazy">
+
+					</picture>
+
+				</div>
+
+			</div>
+
+			<div class="about-column__col">
+
+				<div class="about-column__text">
+
+					<p>
+						Velvet Platform is a multi-currency payments platform, designed for collaboration, using the security of escrow. We aim to empower our customers to do business in the new economy on the basis of earned trust.
+					</p>
+
+					<p>
+						Enabling business without borders - where decisions about people are based on their choices and behaviour, not a category or a tickbox.
+					</p>
+
+				</div>
+
+				<div class="about-column__img">
+
+					<picture>
+
+						<source srcset="/img/about/2--640.webp" media="(max-width: 360px)" type="image/webp">
+						<source srcset="/img/about/2--640.jpg" media="(max-width: 360px)">
+
+						<source srcset="/img/about/2--504.webp 1x, /img/about/2--1008.webp 2x" type="image/webp">
+						<source srcset="/img/about/2--504.jpg 1x, /img/about/2--1008.jpg 2x">
+
+						<img src="/img/about/2--504.jpg" alt="" width="504" height="504" loading="lazy">
+
+					</picture>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="about-goal">
+
+			<div class="about-goal__box">
+
+				<div class="about-goal__title">
+
+					<h2 class="h1">
+						Our goal
+					</h2>
+
+				</div>
+
+				<p class="about-goal__text">
+					We provide the infrastructure for the way our customers do business now  - cross border, multi-currency, in collaboration and partnership with others in an environment of earned trust. We create the products our customers need to perform at their best and to create the world they want to see.
+				</p>
+
+			</div>
+
+		</div>
+
+		<div class="about-text-img">
+
+			<h2 class="about-text-img__title h1">
+				Our strategy
+			</h2>
+
+			<div class="about-text-img__box">
+
+				<div class="about-text-img__item">
+
+					<p>
+						From the start the vision was clear: Velvet was born to be a fully automated multi-currency escrow account with remote authentication - all done with ease and in a secure and compliant manner.
+					</p>
+
+					<p>
+						Velvet 1.0 won prizes, but ultimately traction and uptake were low which brought greater clarity of what we needed to focus on - our core - the security of the platform.
+					</p>
+
+					<p>
+						Our passion to help grow this future economy in a secure manner has brought about Velvet Platform 2.0 which consists of the Velvet Platform, the AML/KYC module, and the GDPR module.
+					</p>
+
+				</div>
+
+				<div class="about-text-img__item">
+
+					<picture>
+
+						<source srcset="/img/about/3--640.webp" media="(max-width: 360px)" type="image/webp">
+						<source srcset="/img/about/3--640.jpg" media="(max-width: 360px)">
+
+						<source srcset="/img/about/3--504.webp 1x, /img/about/3--1008.webp 2x" type="image/webp">
+						<source srcset="/img/about/3--504.jpg 1x, /img/about/3--1008.jpg 2x">
+
+						<img src="/img/about/3--504.jpg" alt="" width="504" height="504" loading="lazy">
+
+					</picture>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<hr class="hidden-sm">
+
+		<div class="about-entities">
+
+			<h3 class="h1">
+				Related Entities
+			</h3>
+
+{% set list = [
+
+{
+	flag    : "uk",
+	country : "UK",
+	name    : "Velvet Finance Limited"
+},
+{
+	flag : "eu",
+	country : "Europe / EEA",
+	name : "PayPugs BV"
+},
+{
+	flag : "us",
+	country : "United States",
+	name : "Exodus Services Group Inc."
+},
+{
+	flag : "ca",
+	country : "Canada",
+	name : "PayPugs Payments Canada&nbsp;Inc."
+}
+
+] %}
+
+			<ul class="about-entities__list">
+
+{% for item in list %}
+
+				<li class="about-entities__item">
+
+					<figure class="about-entities__flag">
+
+						<img src="/img/lang/{{ item.flag }}.svg" alt="{{ item.name }}" width="54" height="36" loading="lazy">
+
+						<figcaption class="about-entities__country">
+							{{ item.country }}
+						</figcaption>
+
+					</figure>
+
+					<p class="about-entities__name">
+
+						{{ item.name | safe }}
+
+						<small class="about-entities__desc">
+							Operations / Payments
+						</small>
+
+					</p>
+
+				</li>
+
+{% endfor %}
+
+			</ul>
+
+		</div>
+
+		<hr>
+
+		<div class="about-text-img">
+
+			<h2 class="about-text-img__title h1">
+				Working together
+			</h2>
+
+			<div class="about-text-img__box about-text-img__box--revers">
+
+				<div class="about-text-img__item">
+
+					<p>
+						Through our partnership with the European Coworking Assembly (ECA) we were introduced to a new universe of problems - the problems of the new economy.
+					</p>
+
+					<p>
+						In this we found the perfect fit for Velvet Platform: Bringing together real-life challenges and the secure platform of Velvet through accessible technology.
+					</p>
+
+					<p>
+						We realised that trust and security can cross industries and is at the core of all businesses. Even more so for startups, cross-border businesses, and collaborations all building towards the future economy.
+					</p>
+
+				</div>
+
+				<div class="about-text-img__item">
+
+					<picture>
+
+						<source srcset="/img/about/4--640.webp" media="(max-width: 360px)" type="image/webp">
+						<source srcset="/img/about/4--640.jpg" media="(max-width: 360px)">
+
+						<source srcset="/img/about/4--504.webp 1x, /img/about/4--1008.webp 2x" type="image/webp">
+						<source srcset="/img/about/4--504.jpg 1x, /img/about/4--1008.jpg 2x">
+
+						<img src="/img/about/4--504.jpg" alt="" width="504" height="504" loading="lazy">
+
+					</picture>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</article>
+
+{% endblock %}
