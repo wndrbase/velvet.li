@@ -53,6 +53,7 @@
 {% endfor %}
 
 {% if build %}
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-191566835-2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -61,6 +62,23 @@
 
   gtag('config', 'UA-191566835-2');
 </script>
+
+<script>
+
+	( script => {
+
+		script.src = '//js.hs-scripts.com/19575538.js';
+
+		setTimeout( () => {
+
+			document.head.appendChild(script);
+
+		}, 10000);
+
+	})(document.createElement('script'));
+
+</script>
+
 {% endif %}
 
 </head>
