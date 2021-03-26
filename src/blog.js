@@ -3,6 +3,8 @@
 	// загружаем форму
 	const script = document.createElement('script');
 
+	let scriptLoad = false;
+
 	script.async = true;
 	script.src = '//js.hsforms.net/forms/v2.js';
 
@@ -13,6 +15,8 @@
 			portalId: "19575538",
 			formId: "77ef9e38-357c-4b1b-9da8-8f8b7b961fca"
 		});
+
+		scriptLoad = true;
 
 	};
 
@@ -32,6 +36,22 @@
 
 			document.body.classList.add('show-popup-hubspot-form');
 			event.preventDefault();
+
+			if(scriptLoad) {
+
+				Array.from(document.querySelectorAll('.hbspt-form-wrap'), el => {
+
+					console.log(el.querySelector('.hbspt-form form'))
+
+					if(!el.querySelector('.hbspt-form form')){
+
+						el.remove();
+
+					}
+
+				});
+
+			}
 
 		}
 
