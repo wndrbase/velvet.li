@@ -21,7 +21,7 @@
 		display: flex;
 		justify-content: space-between;
 
-		@media ($smWidth) {
+		@media ($mdWidth) {
 
 			flex-wrap: wrap;
 
@@ -31,27 +31,12 @@
 
 	&__column {
 
-		&--company {
+		width: 180px;
 
-			width: 180px;
+		@media ($mdWidth) {
 
-			@media ($mdWidth) {
-
-				width: 150px;
-
-			}
-
-		}
-
-		&--legal {
-
-			width: 180px;
-
-			@media ($mdWidth) {
-
-				width: 150px;
-
-			}
+			width: 150px;
+			margin-bottom: 30px;
 
 		}
 
@@ -62,14 +47,8 @@
 
 			@media ($mdWidth) {
 
-				width: 400px;
-
-			}
-
-			@media ($smWidth) {
-
 				width: 100%;
-				margin: 30px 0 0;
+				margin: 0;
 
 			}
 

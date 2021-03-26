@@ -85,6 +85,14 @@
 
 	}
 
+	&--outline {
+
+		color: var(--MainPurple);
+		background-color: transparent;
+		box-shadow: inset 0 0 0 2px var(--MainPurple);
+
+	}
+
 	&--small {
 
 		padding: 0 20px;
