@@ -9,6 +9,10 @@
 	<link href="/css/styles.css" rel="preload" as="style">
 	<link href="/js/scripts.js" rel="preload" as="script">
 
+{% if build %}
+	<link href="//js.hs-scripts.com/19575538.js" rel="preload" as="script">
+{% endif %}
+
 	<link href="/fonts/poppins-v13-latin-ext_latin-300.woff2" rel="preload" as="font" type="font/woff2" crossorigin>
 	<link href="/fonts/poppins-v13-latin-ext_latin-400.woff2" rel="preload" as="font" type="font/woff2" crossorigin>
 	<link href="/fonts/poppins-v13-latin-ext_latin-500.woff2" rel="preload" as="font" type="font/woff2" crossorigin>
@@ -69,11 +73,7 @@
 
 		script.src = '//js.hs-scripts.com/19575538.js';
 
-		setTimeout( () => {
-
-			document.head.appendChild(script);
-
-		}, 10000);
+		setTimeout( () => document.head.appendChild(script), 1000);
 
 	})(document.createElement('script'));
 
